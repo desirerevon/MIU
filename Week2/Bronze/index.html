@@ -35,6 +35,16 @@
 		<div data-role="header" data-position="fixed" class="mainColor">
 			<h1>I Remember</h1>
 		</div>
+		
+		<!--Search Box-->
+		<div id="search">
+			<center>
+				<!--Links to underCon page-->
+				<form method="get" action="underCon.html"> 
+					<input type="text" name="Mynote" alt="Search" value="" maxlength="200" size="50" vspace="60px" />
+					<input type="submit" name="noteSearch" value="Find A Note" />
+				</form>
+		</div>
 
 		<!-- Home Content -->
 		<div data-role="content">
@@ -256,6 +266,48 @@
 			<img src="images/eUnder.png" class="imgSize"/>
 
 		</div>
+		
+		<!--Start Form-->
+		
+		<nav>
+				<a href="#" id="clear">Clear</a>
+				<a href="#" id="display">Display Data</a>
+				<a href ="additem.html" id = "addNew" style = "display: none;" >Add New Note</a>
+			</nav>
+		<!--Form Starts-->
+		<form action="#" method="post" id="friendForm">
+				<!--Began Fieldset-->
+				<fieldset id="login">
+					<legend>Login</legend>
+					<!--Note required field-->
+					<span>*Required Fields</span>
+				    <ul id="errors"></ul>
+					<!--Unordered list that creates bullets next to each unput label-->
+					<ul id="Log In">
+						<li><label for="username">*User Name:</label><input  type="text" id="username" placeholder="user name"/></li>
+						<li><label for="password">*Password:</label><input type="password" id="password" placeholder="password"/></li>
+					</ul>
+				</fieldset>
+			<!--Drop Down-->
+			   <fieldset>
+				<legend>Remember This</legend>
+					<li id="select"><label for="friend">Select Friend:</label><br /></li>
+					<span>Is this the right friend:</span>
+					<li><input type="checkbox" id ="fav" value="Yes" class="checkbox" /><label for="fav">Yes</label></li>
+					<li><label for="importance">Importance:</label>
+						<ul class="checkbox">
+							<li><input type="radio" id="Really Important"   value="Really Important" name="importance" /><label for="Really Important">Really Important</label></li>
+							<li><input type="radio" id="I can't remember everything"  value="I can't remember everything" name="importance" /><label for="I can't remember everything">I can't remember everything</label></li>
+						</ul>
+					</li>
+					<li><label for="reminder:">Remind me this many times(1-10):</label><input type="range" id="reminder" min="1" max="10" /></li>
+					<br>
+					<li><label for="date">Remind Me On This Day:</label><input type="date" id="date" /></li>
+					<li><label for="notes">Note:</label><textarea id="notes" placeholder="Type Here" /></textarea></li>
+				</ul>
+		      <input type="submit" value="Save Note" id="save"/><br />
+			</fieldset>
+		</form>
 
 		<!-- Footer -->
 		<div data-role="footer" data-position="fixed">
