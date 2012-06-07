@@ -57,34 +57,32 @@
 			</div>
 
 			<!-- Browse -->
-			<div class="ui-grid-b">
+			<div class="ui-grid-a">
 
-				<div class="ui-block-a" >
+				<div class="ui-block-b" >
 					<a href="underCon.html">
-						<!--<img src=""/>-->
+					<img src="/Users/desiregardner/Desktop/MIU/Week2/Bronze/images/Recent.jpg"/>
 					</a>
 					<p>Recent</p>
 				</div>
+				
 				<div class="ui-block-b" >
 					<a href="underCon.html">
-						<!--<img src=""/>-->
+					<img src="/Users/desiregardner/Desktop/MIU/Week2/Bronze/images/Shared.jpg"/>
 					</a>
 					<p>Shared</p>
 				</div>
-				<div class="ui-block-c" >
+				
+				<div class="ui-block-b" >
 					<a href="underCon.html">
-						<!--<img src=""/>-->
+					<img src="/Users/desiregardner/Desktop/MIU/Week2/Bronze/images/Favorites.jpg"/>
 					</a>
 					<p>Favorites</p>
 				</div>
 
-			</div>
-
-			<div class="ui-grid-a">
-
-				<div class="ui-block-a" >
+				<div class="ui-block-b">
 					<a href="underCon.html">
-						<img src=""/>
+					<img src="/Users/desiregardner/Desktop/MIU/Week2/Bronze/images/Trash.jpg"/>
 					</a>
 					<p>Trash</p>
 				</div>
@@ -95,7 +93,7 @@
 		<!-- Footer -->
 		<div data-role="footer" data-position="fixed">
 			<!-- Navbar -->
-			<div data-role="navbar" data-position="fixed">
+			<div data-role="navbar">
 				<ul>
 					<li><a href="#home" data-icon="home">Home</a></li>
 					<li><a href="#about" data-icon="info" data-iconpos="left" class="mainColor">About</a></li>
@@ -106,8 +104,8 @@
 
 	</div>
 
-	<!-- Start of About Page -->
-	<div data-role="page" id="about" data-add-back-btn="true">
+	<!-- Start of About App Page -->
+	<div data-role="page" id="aboutApp" data-add-back-btn="true">
 
 		<!-- Header -->
 		<div data-role="header" data-position="fixed" class="mainColor">
@@ -118,29 +116,19 @@
 		<div data-role="content">
 
 			<div>
-				<img src="" class="imgSize" id="aboutImg" /> <!--need about image-->
+				<h4>I Remember</h4>
+				<p class="indent">More info here...</p><!--Add info about app-->
 			</div>
 
-			<div>
-				<ul data-role="listview">
-
-					<li>
-						<a href="#aboutApp">
-							<!--<img src=""/>-->
-							<h4>About the App</h4>
-							<p>This will tell you about the app</p>
-						</a>
-					</li>
-
-					<li>
-						<a href="underCon.html">
-							<!--<img src="images/.png"/>-->
-							<h4>About the Coder</h4>
-							<p>This will tell you about the coder</p>
-						</a>
-					</li>
-
-				</ul>
+			<div class="ui-grid-a">
+				<div class="ui-block-a">
+					<ul data-role="listview" data-inset="true">
+						<li data-role="list-divider">Why you will love it!</li>
+						<li>Easy Access</li>
+						<li>Does not require you to be connected to the internet</li>
+						<li>Connect with Facebook</li>
+					</ul>
+				</div>
 			</div>
 
 		</div>
@@ -148,7 +136,7 @@
 		<!-- Footer -->
 		<div data-role="footer" data-position="fixed">
 			<!-- Nav bar -->
-			<div data-role="navbar" data-position="fixed">
+			<div data-role="navbar">
 				<ul>
 					<li><a href="#home" data-icon="home">Home</a></li>
 					<li><a href="#about" data-icon="info" data-iconpos="left" class="mainColor">About</a></li>
@@ -159,7 +147,7 @@
 	</div>
 
 	<!-- Start of About App Page -->
-	<div data-role="page" id="aboutApp" data-add-back-btn="true">
+	<div data-role="page" id="about" data-add-back-btn="true">
 
 		<!-- Header -->
 		<div data-role="header" data-position="fixed" class="mainColor">
@@ -193,7 +181,7 @@
 		<!-- Footer -->
 		<div data-role="footer" data-position="fixed">
 			<!-- Nav bar -->
-			<div data-role="navbar" data-position="fixed">
+			<div data-role="navbar">
 				<ul>
 					<li><a href="#home" data-icon="home">Home</a></li>
 					<li><a href="#about" data-icon="info" data-iconpos="left" class="mainColor">About</a></li>
@@ -229,7 +217,7 @@
 		<!-- Footer -->
 		<div data-role="footer" data-position="fixed">
 			<!-- Navbar -->
-			<div data-role="navbar" data-position="fixed">
+			<div data-role="navbar">
 				<ul>
 					<li><a href="#home" data-icon="home">Home</a></li>
 					<li><a href="#about" data-icon="info" data-iconpos="left" class="mainColor">About</a></li>
@@ -241,7 +229,7 @@
 	<!-- Footer -->
 		<div data-role="footer" data-position="fixed">
 			<!-- Navigation bar -->
-			<div data-role="navbar" data-position="fixed">
+			<div data-role="navbar">
 				<ul>
 					<li><a href="#home" data-icon="home">Home</a></li>
 					<li><a href="#about" data-icon="info" data-iconpos="left" class="mainColor">About</a></li>
@@ -267,61 +255,6 @@
 
 		</div>
 		
-		<!--Start Form-->
-		
-		<nav>
-				<a href="#" id="clear">Clear</a>
-				<a href="#" id="display">Display Data</a>
-				<a href ="additem.html" id = "addNew" style = "display: none;" >Add New Note</a>
-			</nav>
-		<!--Form Starts-->
-		<form action="#" method="post" id="friendForm">
-				<!--Began Fieldset-->
-				<fieldset id="login">
-					<legend>Login</legend>
-					<!--Note required field-->
-					<span>*Required Fields</span>
-				    <ul id="errors"></ul>
-					<!--Unordered list that creates bullets next to each unput label-->
-					<ul id="Log In">
-						<li><label for="username">*User Name:</label><input  type="text" id="username" placeholder="user name"/></li>
-						<li><label for="password">*Password:</label><input type="password" id="password" placeholder="password"/></li>
-					</ul>
-				</fieldset>
-			<!--Drop Down-->
-			   <fieldset>
-				<legend>Remember This</legend>
-					<li id="select"><label for="friend">Select Friend:</label><br /></li>
-					<span>Is this the right friend:</span>
-					<li><input type="checkbox" id ="fav" value="Yes" class="checkbox" /><label for="fav">Yes</label></li>
-					<li><label for="importance">Importance:</label>
-						<ul class="checkbox">
-							<li><input type="radio" id="Really Important"   value="Really Important" name="importance" /><label for="Really Important">Really Important</label></li>
-							<li><input type="radio" id="I can't remember everything"  value="I can't remember everything" name="importance" /><label for="I can't remember everything">I can't remember everything</label></li>
-						</ul>
-					</li>
-					<li><label for="reminder:">Remind me this many times(1-10):</label><input type="range" id="reminder" min="1" max="10" /></li>
-					<br>
-					<li><label for="date">Remind Me On This Day:</label><input type="date" id="date" /></li>
-					<li><label for="notes">Note:</label><textarea id="notes" placeholder="Type Here" /></textarea></li>
-				</ul>
-		      <input type="submit" value="Save Note" id="save"/><br />
-			</fieldset>
-		</form>
-
-		<!-- Footer -->
-		<div data-role="footer" data-position="fixed">
-			<!-- Navigation bar -->
-			<div data-role="navbar" data-position="fixed">
-				<ul>
-					<li><a href="#home" data-icon="home">Home</a></li>
-					<li><a href="#about" data-icon="info" data-iconpos="left" class="mainColor">About</a></li>
-					<li><a href="/Users/desiregardner/Desktop/MIU/Week2/Gold/index.html" data-icon="plus">Gold</a></li>
-				</ul>
-			</div>
-		</div>
-
-	</div>
 
 	<!-- JavaScript under here -->
 	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
