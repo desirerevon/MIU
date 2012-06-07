@@ -35,12 +35,6 @@
 		<div data-role="header" data-position="fixed" class="mainColor">
 			<h1>I Remember</h1>
 		</div>
-		
-		<!-- Search -->
-		<div data-role="fieldcontain">
-			<label for="search-basic">Search Notes</label>
-			<input type="search" name="search" id="searc-basic" value="" data-mini="true" />	
-		</div>
 
 		<!-- Home Content -->
 		<div data-role="content">
@@ -62,13 +56,13 @@
 					<p>Recent</p>
 				</div>
 				<div class="ui-block-b" >
-					<a href="#underConstruction">
+					<a href="underCon.html">
 						<!--<img src=""/>-->
 					</a>
 					<p>Shared</p>
 				</div>
 				<div class="ui-block-c" >
-					<a href="#underConstruction">
+					<a href="underCon.html">
 						<!--<img src=""/>-->
 					</a>
 					<p>Favorites</p>
@@ -79,25 +73,19 @@
 			<div class="ui-grid-a">
 
 				<div class="ui-block-a" >
-					<a href="#underConstruction">
+					<a href="underCon.html">
 						<img src=""/>
 					</a>
 					<p>Trash</p>
 				</div>
 			</div>
-
-			<!-- User Notes -->
-			<!--News Section-->
-			<div>
-				<a href="#notes"data-role="button" class="secondaryColor" >My Notes</a>
-			</div>
-
+			
 		</div>
 
 		<!-- Footer -->
 		<div data-role="footer" data-position="fixed">
 			<!-- Navbar -->
-			<div data-role="navbar" data-positioned="fixed">
+			<div data-role="navbar" data-position="fixed">
 				<ul>
 					<li><a href="#home" data-icon="home">Home</a></li>
 					<li><a href="#about" data-icon="info" data-iconpos="left" class="mainColor">About</a></li>
@@ -159,7 +147,7 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<!-- Start of About App Page -->
 	<div data-role="page" id="aboutApp" data-add-back-btn="true">
 
@@ -172,7 +160,7 @@
 		<div data-role="content">
 
 			<div>
-				<!--<img src="" class="imgSize" />-->
+				<img src="" class="imgSize" />
 			</div>
 
 			<div>
@@ -239,150 +227,8 @@
 				</ul>
 			</div>
 		</div>
-
-	<!-- Notes Page -->
-	<div data-role="page" id="notes" data-add-back-btn="true"> <!--ID NOTES-->
-
-		<!-- Header -->
-		<div data-role="header" data-position="fixed" class="mainColor">
-			<h1>My Notes</h1>
-		</div>
-
-		<!-- Notes Page Content -->
-		<div data-role="content">
-
-			<ul data-role="listview" data-filter="true">
-
-				<li>
-					<a href="underCon.html">
-						<!--<img src=""/>-->
-						<h4>Friend</h4>
-						<span><small>Birthday is on Saturday</small></span>
-					</a>
-				</li>
-
-				<li>
-					<a href="underCon.html">
-						<!--<img src=""/>-->
-						<h4>Friend</h4>
-						<span><small>Loves white roses</span></small>
-					</a>
-				</li>
-
-				<li>
-					<a href="underCon.html">
-						<!--<img src=""/>-->
-						<h4>Fiance</h4>
-						<span><small>Jennnas ring size is 6</small></span>
-					</a>
-				</li>
-
-				<li>
-					<a href="underCon.html">
-						<!--<img src=""/>-->
-						<h4>Parent</h4>
-						<span><small>Leave keys under small pot for mom</small></span>
-					</a>
-				</li>
-
-				<li>
-					<a href="underCon.html">
-						<!--<img src=""/>-->
-						<h4>Girlfriend</h4>
-						<span><small>Her favorite color is blue</small></span>
-					</a>
-				</li>
-
-				<li>
-					<a href="underCon.html">
-						<!--<img src=""/>-->
-						<h4>Boyfriend</h4>
-						<span><small>New Jordans come out June 3rd pick up on friday</small></span>
-					</a>
-				</li>
-
-				<li>
-					<a href="underCon.html">
-						<!--<img src=""/>-->
-						<h4>Other</h4>
-						<span><small>Sisters gradutation is in May bring her drive up in new car</small></span>
-					</a>
-				</li>
-			</ul>
-		</div>
-
-		<!-- Footer -->
-		<div data-role="footer" data-position="fixed">
-			<!-- Navigation bar -->
-			<div data-role="navbar" data-position="fixed">
-				<ul>
-					<li><a href="#home" data-icon="home">Home</a></li>
-					<li><a href="#about" data-icon="info" data-iconpos="left" class="mainColor">About</a></li>
-					<li><a href="/Users/desiregardner/Desktop/MIU/Week2/Gold/index.html" data-icon="plus">Gold</a></li>
-				</ul>
-			</div>
-		</div>
-
-	</div>
-	<!-- Start Add Item Page -->
-	<div data-role="page" id="additem">
-
-		<!-- Header -->
-		<div data-role="header" data-position="fixed" data-add-back-btn="true" class="mainColor">
-			<h1>Create A New Note</h1>
-		</div>
-
-		<div data-role="content">
-
-			<div data-filter="true" id="hiddenSearch" style="display:none;">
-
-			</div>
-
-			<!-- Display Link -->
-			<div id="nav">
-				<a href="#" id="showData" data-role="button" data-position="inline" class="secondaryColor">Display Data</a>
-				<a href="#" id="clearData" data-role="button" data-position="inline" class="secondaryColor">Clear Stored Data</a>
-					<!-- Start New Workout *hidden* -->
-				<a href="#additem" id="startNew" data-role="button" data-position="inline" class="secondaryColor" style="display:none;">Create A New Note</a>
-			</div>
-			<!--Form Starts-->
-		<form action="#" method="post" id="friendForm">
-				<!--Began Fieldset-->
-				<fieldset id="login">
-					<legend>Login</legend>
-					<!--Note required field-->
-					<span>*Required Fields</span>
-				    <ul id="errors"></ul>
-					<!--Unordered list that creates bullets next to each unput label-->
-					<ul id="Log In">
-						<li><label for="username">*User Name:</label><input  type="text" id="username" placeholder="user name"/></li>
-						<li><label for="password">*Password:</label><input type="password" id="password" placeholder="password"/></li>
-					</ul>
-				</fieldset>
-			<!--Drop Down-->
-			   <fieldset>
-				<legend>Remember This</legend>
-					<li id="select"><label for="friend">Select Friend:</label><br /></li>
-					<span>Is this the right friend:</span>
-					<li><input type="checkbox" id ="fav" value="Yes" class="checkbox" /><label for="fav">Yes</label></li>
-					<li><label for="importance">Importance:</label>
-						<ul class="checkbox">
-							<li><input type="radio" id="Really Important"   value="Really Important" name="importance" /><label for="Really Important">Really Important</label></li>
-							<li><input type="radio" id="I can't remember everything"  value="I can't remember everything" name="importance" /><label for="I can't remember everything">I can't remember everything</label></li>
-						</ul>
-					</li>
-					<li><label for="reminder:">Remind me this many times(1-10):</label><input type="range" id="reminder" min="1" max="10" /></li>
-					<br>
-					<li><label for="date">Remind Me On This Day:</label><input type="date" id="date" /></li>
-					<li><label for="notes">Note:</label><textarea id="notes" placeholder="Type Here" /></textarea></li>
-				</ul>
-		      <input type="submit" value="Save Note" id="save"/><br />
-			</fieldset>
-		</form>
-
-		</div>
-
-		<!-- Footer -->
+	
+	<!-- Footer -->
 		<div data-role="footer" data-position="fixed">
 			<!-- Navigation bar -->
 			<div data-role="navbar" data-position="fixed">
@@ -424,7 +270,7 @@
 		</div>
 
 	</div>
-	
+
 	<!-- JavaScript under here -->
 	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>

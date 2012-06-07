@@ -36,27 +36,36 @@
 			<h1>I Remember</h1>
 		</div>
 
-		<!-- Search -->
-		<div data-role="fieldcontain">
-			<label for="search-basic">Search Notes</label>
-			<input type="search" name="search" id="searc-basic" value="" data-mini="true" />	
-		</div>
-
 		<!-- Home Content -->
 		<div data-role="content">
 
 			<!-- Call to Action -->
-			<div>
+		<div>
 				<a href="additem.html" rel="external">
 					<img class="imgSize" src="images/Feature.png" />
 				</a>
-			</div>
+		</div>
 
-			<!--User Notes-->
-			<!--News Section-->
-			<div>
-				<a href="#notes" data-role="button" class="secondaryColor" >My Notes</a>
-			</div>
+		 	<!--News: html page links-->
+			<div data-role="header" data-position="fixed">
+    		<h1>News</h1>
+  		</div>
+  		
+  			<div data-role="content">
+    				<ul data-role="listview" data-filter="true">
+      					<li> <a href="headline.html"> <img src="">
+        					<h3>Top 10 Ways to Improve Your Memory........</h3>
+        					<p>Witnesses report specters in Civil war garb.</p>
+       					 </a> </li>
+      					<li> <a href="headline.html">What will quantum computers be used for in the future?</a> </li>
+     				    <li><a href="headline.html">What is Google Groups?</a></li>
+   					 </ul>
+  			</div>
+  			<div data-role="footer" data-position="fixed" data-id="foot">
+   		    <div data-role="navbar" data-position="fixed">
+    	</div>
+  	</div>
+</div>
 
 			<!-- Browse -->
 			<div data-role="collapsible-set">
@@ -184,60 +193,7 @@
 		</div>
 	</div>
 
-	<!-- Start of About Page -->
-	<div data-role="page" id="about" data-add-back-btn="true">
-
-		<!-- Header -->
-		<div data-role="header" data-position="fixed" class="mainColor">
-			<h1>About I Remember</h1>
-		</div>
-
-		<!--  About Content -->
-		<div data-role="content">
-
-			<div>
-				<img src="" class="imgSize" />
-			</div>
-
-			<div data-role="collapsible" data-collapsed="true">
-					<h3>Information</h3>
-					<ul data-role="listview">
-
-						<li>
-							<a href="#aboutApp">
-								<img src=""/> <!--need abbout img-->
-								<h4>About the App</h4>
-								<p>This will tell you about the app</p>
-							</a>
-						</li>
-
-						<li>
-							<a href="underCon.html">
-								<img src="images/feature.png"/>
-								<h4>About the Coder</h4>
-								<p>This will tell you about the coder</p>
-							</a>
-						</li>
-
-					</ul>
-				</div>
-
-		</div>
-
-`		<!-- Footer -->
-		<div data-role="footer" data-position="fixed">
-			<!-- Nav bar -->
-			<div data-role="navbar" data-position="fixed">
-				<ul>
-					<li><a href="#home" data-icon="home">Home</a></li>
-					<li><a href="#about" data-icon="info" data-iconpos="left" class="mainColor">About</a></li>
-					<li><a href="/Users/desiregardner/Desktop/MIU/Week2/Bronze/index.html" data-icon="plus">Bronze</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-
-		<!-- Start of About App Page -->
+	<!-- Start of About App Page -->
 	<div data-role="page" id="aboutApp" data-add-back-btn="true">
 
 		<!-- Header -->
@@ -253,8 +209,8 @@
 			</div>
 
 			<div>
-				<h4>I Remeber</h4>
-				<p class="indent"> More info here...</p><!--Add info about app-->
+				<h4>I Remember</h4>
+				<p class="indent">More info here...</p><!--Add info about app-->
 			</div>
 
 			<div class="ui-grid-a">
@@ -263,7 +219,6 @@
 						<li data-role="list-divider">Why you will love it!</li>
 						<li>Easy Access</li>
 						<li>Connect with Facebook</li>
-
 					</ul>
 				</div>
 			</div>
@@ -272,7 +227,7 @@
 
 		<!-- Footer -->
 		<div data-role="footer" data-position="fixed">
-			<!-- Navigation bar -->
+			<!-- Nav bar -->
 			<div data-role="navbar" data-position="fixed">
 				<ul>
 					<li><a href="#home" data-icon="home">Home</a></li>
@@ -281,10 +236,7 @@
 				</ul>
 			</div>
 		</div>
-
 	</div>
-
-
 
 	<!-- Start of otherApp Page -->
 	<div data-role="page" id="otherApp" data-add-back-btn="true">
@@ -322,91 +274,7 @@
 		</div>
 
 	</div>
-	<!-- Notes Page -->
-	<div data-role="page" id="notes" data-add-back-btn="true"> <!--ID NOTES-->
-
-		<!-- Header -->
-		<div data-role="header" data-position="fixed" class="mainColor">
-			<h1>My Notes</h1>
-		</div>
-
-		<!-- Notes Page Content -->
-		<div data-role="content">
-
-			<ul data-role="listview" data-filter="true">
-
-				<li>
-					<a href="underCon.html">
-						<!--<img src=""/>-->
-						<h4>Friend</h4>
-						<span><small>Birthday is on Saturday</small></span>
-					</a>
-				</li>
-
-				<li>
-					<a href="underCon.html">
-						<!--<img src=""/>-->
-						<h4>Friend</h4>
-						<span><small>Loves white roses</span></small>
-					</a>
-				</li>
-
-				<li>
-					<a href="underCon.html">
-						<!--<img src=""/>-->
-						<h4>Fiance</h4>
-						<span><small>Jennnas ring size is 6</small></span>
-					</a>
-				</li>
-
-				<li>
-					<a href="underCon.html">
-						<!--<img src=""/>-->
-						<h4>Parent</h4>
-						<span><small>Leave keys under small pot for mom</small></span>
-					</a>
-				</li>
-
-				<li>
-					<a href="underCon.html">
-						<!--<img src=""/>-->
-						<h4>Girlfriend</h4>
-						<span><small>Her favorite color is blue</small></span>
-					</a>
-				</li>
-
-				<li>
-					<a href="underCon.html">
-						<!--<img src=""/>-->
-						<h4>Boyfriend</h4>
-						<span><small>New Jordans come out June 3rd pick up on friday</small></span>
-					</a>
-				</li>
-
-				<li>
-					<a href="underCon.html">
-						<!--<img src=""/>-->
-						<h4>Other</h4>
-						<span><small>Sisters gradutation is in May bring her drive up in new car</small></span>
-					</a>
-				</li>
-			</ul>
-		</div>
-
-		<!-- Footer -->
-		<div data-role="footer" data-position="fixed">
-			<!-- Navigation bar -->
-			<div data-role="navbar" data-position="fixed">
-				<ul>
-					<li><a href="#home" data-icon="home">Home</a></li>
-					<li><a href="#about" data-icon="info" data-iconpos="left" class="mainColor">About</a></li>
-					<li><a href="/Users/desiregardner/Desktop/MIU/Week2/Bronze/index.html" data-icon="plus">Bronze</a></li>
-				</ul>
-			</div>
-		</div>
-
-	</div>
-
+	
 	<!-- Start of Construction Page -->
 	<div data-role="page" id="underCon.html" data-add-back-btn="true"><!--ID UNDER CON-->
 
@@ -439,5 +307,7 @@
 		<!-- JavaScript under here -->
 		<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
+		<script type="text/javascript" src="js/json.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
 	</body>
 </html>
