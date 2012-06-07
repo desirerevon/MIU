@@ -1,0 +1,445 @@
+<!Doctype html>
+<!--Desire Revon-->
+<!--MIU: Project 2-->
+<!--Term:1206-->
+<!--I Remember Mobile Application--> 
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	
+	<title>I Remember</title>
+	
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Mobile IE needs ClearType for smoothing fonts -->
+	<meta http-equiv="cleartype" content="on">
+	
+	<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	
+	
+	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+
+</head>
+<body>
+	<!-- Start of Home Page -->
+	<div data-role="page" id="home"> <!--ID HOME-->
+
+		<!-- Header -->
+		<div data-role="header" data-position="fixed" class="mainColor">
+			<h1>I Remember</h1>
+		</div>
+		
+		<!-- Search -->
+		<div data-role="fieldcontain">
+			<label for="search-basic">Search Notes</label>
+			<input type="search" name="search" id="searc-basic" value="" data-mini="true" />	
+		</div>
+
+		<!-- Home Content -->
+		<div data-role="content">
+
+			<!-- Call to Action -->
+			<div>
+				<a href="additem.html" rel="external">
+					<img class="imgSize" src="images/Feature.png" />
+				</a>
+			</div>
+
+			<!--User Notes-->
+			<!--News Section-->
+			<div>
+				<a href="#notes" data-role="button" class="secondaryColor" >My Notes</a>
+			</div>
+
+			<!-- Browse -->
+			<div data-role="collapsible-set">
+			<!-- Browse By Friend Type -->
+				<div data-role="collapsible" data-collapsed="true">
+					<h3>Browse By Friend Type</h3>
+					<ul data-role="listview">
+						<li>
+							<a href="underCon.html">
+								<!-- <img src="images/.png"/> -->
+								<h4>Friend</h4>
+							</a>
+						</li>
+
+						<li>
+							<a href="underCon.html">
+								<!-- <img src="images/.png"/> -->
+								<h4>Girlfriend</h4>
+						    </a>
+						</li>
+
+						<li>
+							<a href="underCon.html">
+								<!-- <img src="images/.png"/> -->
+								<h4>Boyfriend</h4>
+						    </a>
+						</li>
+
+						<li>
+							<a href="underCon.html">
+								<!-- <img src="images/.png"/> -->
+								<h4>Fiance</h4>
+							</a>
+						</li>
+						
+						<li>
+							<a href="underCon.html">
+								<!-- <img src="images/.png"/> -->
+								<h4>Parent</h4>
+							</a>
+						</li>
+						
+						<li>
+							<a href="underCon.html">
+								<!-- <img src="images/.png"/> -->
+								<h4>Sibling</h4>
+							</a>
+						</li>
+						
+						<li>
+							<a href="underCon.html">
+								<!-- <img src="images/.png"/> -->
+								<h4>Other</h4>
+							</a>
+						</li>
+
+					</ul>
+				</div>
+
+				<!-- Browse by Importance-->			
+				<div data-role="collapsible" data-collapsed="true">
+					<h3>Browse by Importance</h3>
+					<ul data-role="listview">
+
+						<li>
+							<a href="underCon.html">
+								<!-- <img src="images/.png"/> -->
+								<h4>Really Important</h4>
+							</a>
+						</li>
+
+						<li>
+							<a href="underCon.html">
+								<!-- <img src="images/.png"/> -->
+								<h4>I can't remember everything</h4>
+							</a>
+						</li>
+					</ul>
+				</div>
+				
+				<!-- Browse by Note Type-->			
+				<div data-role="collapsible" data-collapsed="true">
+					<h3>Browse by Notes Type</h3>
+					<ul data-role="listview">
+
+						<li>
+							<a href="underCon.html">
+								<!-- <img src="images/.png"/> -->
+								<h4>Recent</h4>
+							</a>
+						</li>
+
+						<li>
+							<a href="underCon.html">
+								<!-- <img src="images/.png"/> -->
+								<h4>Shared</h4>
+							</a>
+						</li>
+						
+						<li>
+							<a href="underCon.html">
+								<!-- <img src="images/.png"/> -->
+								<h4>Favorites</h4>
+							</a>
+						</li>
+						
+						<li>
+							<a href="underCon.html">
+								<!-- <img src="images/.png"/> -->
+								<h4>Trash</h4>
+							</a>
+						</li>
+					</ul>
+				</div>
+		<!-- Footer -->
+		<div data-role="footer" data-position="fixed">
+			<!-- Nav bar -->
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home" data-iconpos="left" class="secondaryColor">Home</a></li>
+					<li><a href="#about" data-icon="info" data-iconpos="left" class="mainColor">About</a></li>
+					<li><a href="#bronzeApp"data-icon="check" data-iconpos="left" class="mainColor">Bronze Application</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- Start of About Page -->
+	<div data-role="page" id="about" data-add-back-btn="true">
+
+		<!-- Header -->
+		<div data-role="header" data-position="fixed" class="mainColor">
+			<h1>About I Remember</h1>
+		</div>
+
+		<!--  About Content -->
+		<div data-role="content">
+
+			<div>
+				<img src="" class="imgSize" />
+			</div>
+
+			<div data-role="collapsible" data-collapsed="true">
+					<h3>Information</h3>
+					<ul data-role="listview">
+
+						<li>
+							<a href="#aboutApp">
+								<img src=""/> <!--need abbout img-->
+								<h4>About the App</h4>
+								<p>This will tell you about the app</p>
+							</a>
+						</li>
+
+						<li>
+							<a href="underCon.html">
+								<img src="images/feature.png"/>
+								<h4>About the Coder</h4>
+								<p>This will tell you about the coder</p>
+							</a>
+						</li>
+
+					</ul>
+				</div>
+
+		</div>
+		
+`		<!-- Footer -->
+		<div data-role="footer" data-position="fixed">
+			<!-- Nav bar -->
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home" data-iconpos="left" class="mainColor">Home</a></li>
+					<li><a href="#about" data-icon="info" data-iconpos="left" class="secondaryColor">About</a></li>
+					<li><a href="#bronzeApp"data-icon="check" data-iconpos="left" class="mainColor">Bronze Application</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+		<!-- Start of About App Page -->
+	<div data-role="page" id="aboutApp" data-add-back-btn="true">
+
+		<!-- Header -->
+		<div data-role="header" data-position="fixed" class="mainColor">
+			<h1>About I Remember</h1>
+		</div>
+
+		<!--  About Content -->
+		<div data-role="content">
+
+			<div>
+				<img src="" class="imgSize" />
+			</div>
+
+			<div>
+				<h4>I Remeber</h4>
+				<p class="indent"> More info here...</p><!--Add info about app-->
+			</div>
+
+			<div class="ui-grid-a">
+				<div class="ui-block-a">
+					<ul data-role="listview" data-inset="true">
+						<li data-role="list-divider">Why you will love it!</li>
+						<li>Easy Access</li>
+						<li>Connect with Facebook</li>
+						
+					</ul>
+				</div>
+			</div>
+
+		</div>
+		
+		<!-- Footer -->
+		<div data-role="footer" data-position="fixed">
+			<!-- Navigation bar -->
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home" data-iconpos="left" class="mainColor">Home</a></li>
+					<li><a href="#about" data-icon="info" data-iconpos="left" class="mainColor">About</a></li>
+					<li><a href="#bronzeApp"data-icon="check" data-iconpos="left" class="mainColor">Bronze Application</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+		
+			
+	
+	<!-- Start of otherApp Page -->
+	<div data-role="page" id="otherApp" data-add-back-btn="true">
+
+		<!-- Header -->
+		<div data-role="header" data-position="fixed" class="mainColor">
+			<h1>Bronze App</h1>
+		</div>
+
+		<!--  Other App Content -->
+		<div data-role="content">
+
+			<ul data-role="listview">
+				<li>
+					<img src=""/>
+					<h4>Bronze Application</h4>
+					<p>To View the Bronze Application click the button below</p>
+				</li>
+			</ul>
+
+			<a href="" data-role="button">Bronze App</a> <!--link to bronze app with github index.html page-->
+
+		</div>
+
+		<!-- Footer -->
+		<div data-role="footer" data-position="fixed">
+			<!-- Navbar -->
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home" data-iconpos="left" class="mainColor">Home</a></li>
+					<li><a href="#about" data-icon="info" data-iconpos="left" class="mainColor">About</a></li>
+					<li><a href="#bronzeApp"data-icon="check" data-iconpos="left" class="secondaryColor">Bronze Application</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+	<!-- Notes Page -->
+	<div data-role="page" id="notes" data-add-back-btn="true"> <!--ID NOTES-->
+
+		<!-- Header -->
+		<div data-role="header" data-position="fixed" class="mainColor">
+			<h1>My Notes</h1>
+		</div>
+
+		<!-- Notes Page Content -->
+		<div data-role="content">
+
+			<ul data-role="listview" data-filter="true">
+
+				<li>
+					<a href="underCon.html">
+						<!--<img src=""/>-->
+						<h4>Friend</h4>
+						<span><small>Birthday is on Saturday</small></span>
+					</a>
+				</li>
+
+				<li>
+					<a href="underCon.html">
+						<!--<img src=""/>-->
+						<h4>Parent</h4>
+						<span><small>Loves white roses</span></small>
+					</a>
+				</li>
+
+				<li>
+					<a href="underCon.html">
+						<!--<img src=""/>-->
+						<h4>Fiance</h4>
+						<span><small>Jennnas ring size is 6</small></span>
+					</a>
+				</li>
+
+				<li>
+					<a href="underCon.html">
+						<!--<img src=""/>-->
+						<h4>Yoga: Other</h4>
+						<span><small>Leave keys under small pot for mom</small></span>
+					</a>
+				</li>
+
+				<li>
+					<a href="underCon.html">
+						<!--<img src=""/>-->
+						<h4>Girlfriend</h4>
+						<span><small>Her favorite color is blue</small></span>
+					</a>
+				</li>
+
+				<li>
+					<a href="underCon.html">
+						<!--<img src=""/>-->
+						<h4>Boyfriend</h4>
+						<span><small>New Jordans come out June 3rd pick up on friday</small></span>
+					</a>
+				</li>
+
+				<li>
+					<a href="underCon.html">
+						<!--<img src=""/>-->
+						<h4>Sibling</h4>
+						<span><small>Sisters gradutation is in May bring her drive up in new car</small></span>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<!-- Footer -->
+		<div data-role="footer" data-position="fixed">
+			<!-- Navigation bar -->
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home" data-iconpos="left" class="mainColor">Home</a></li>
+					<li><a href="#about" data-icon="info" data-iconpos="left" class="mainColor">About</a></li>
+					<li><a href="#bronzeApp"data-icon="check" data-iconpos="left" class="mainColor">Bronze Application</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+	
+	<!-- Start of Construction Page -->
+	<div data-role="page" id="underCon.html" data-add-back-btn="true"><!--ID UNDER CON-->
+
+		<!-- Header -->
+		<div data-role="header" data-position="fixed" class="mainColor">
+			<h1>Under Construction</h1>
+		</div>
+
+		<!--  Construction Content -->
+		<div data-role="content">
+
+			<img src="images/eUnder.png" class="imgSize"/>
+
+		</div>
+		
+		<!-- Footer -->
+		<div data-role="footer" data-position="fixed">
+			<!-- Navigation bar -->
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home" data-iconpos="left" class="mainColor">Home</a></li>
+					<li><a href="#about" data-icon="info" data-iconpos="left" class="mainColor">About</a></li>
+					<li><a href="#bronzeApp"data-icon="check" data-iconpos="left" class="mainColor">Bronze Application</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+	
+		<!-- JavaScript under here -->
+		<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
+		<script type="text/javascript" src="js/json.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>
