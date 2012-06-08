@@ -8,7 +8,7 @@
 window.addEventListener("DOMContentLoaded", function() {
 
 	//Get Element By Id Function.
-	function $(x){
+	function bill(x){
         var theElement = document.getElementById(x);
         return theElement;
     }
@@ -16,7 +16,7 @@ window.addEventListener("DOMContentLoaded", function() {
 	//Create select field element and populate with options.
     function makeField() {
         var formTag = document.getElementsByTagName("form"), //Form tag is an array of all form tags.
-            selectLi = $("select"),
+            selectLi = bill("select"),
             makeSelect = document.createElement("select");
             makeSelect.setAttribute("id", "friends");
         for(var i=0; i<friendType.length; i++){
@@ -41,8 +41,8 @@ window.addEventListener("DOMContentLoaded", function() {
 
 	//Get Selected CheckBox Value
     function getCheckboxValue() {
-        if($("fav").checked){
-          favoriteValue = $("fav").value;
+        if(bill("fav").checked){
+          favoriteValue = bill("fav").value;
         } else {
             favoriteValue = "No";
         }
@@ -51,17 +51,17 @@ window.addEventListener("DOMContentLoaded", function() {
      function toggleControls(n) {
         switch(n){
             case "on":
-            	$("friendForm").style.display ="none";
-                $("clear").style.display = "inline";
-                $("display").style.display = "none";
-                $("addNew").style.display = "inline";
+            	bill("friendForm").style.display ="none";
+                bill("clear").style.display = "inline";
+                bill("display").style.display = "none";
+                bill("addNew").style.display = "inline";
                 break;
             case "off":
-            	$("friendForm").style.display ="block";
-                $('clear').style.display = "inline";
-                $("display").style.display = "inline";
-                $("addNew").style.display = "none";
-                $("items").style.display = "none";
+            	bill("friendForm").style.display ="block";
+                bill('clear').style.display = "inline";
+                bill("display").style.display = "inline";
+                bill("addNew").style.display = "none";
+                bill("items").style.display = "none";
                 break;
             default:
                 return false;
@@ -84,14 +84,14 @@ window.addEventListener("DOMContentLoaded", function() {
         getSelectedRadio();
         getCheckboxValue();
         var item          	= {};
-        	item.friend	  	= ["Friend:", $("friends").value];
-            item.userName 	= ["Username:", $("username").value];
-            item.password 	= ["Password:", $("password").value];
+        	item.friend	  	= ["Friend:", bill("friends").value];
+            item.userName 	= ["Username:", bill("username").value];
+            item.password 	= ["Password:", bill("password").value];
             item.importance = ["Importance:", importanceValue];
             item.favorite   = ["Is right friend:", favoriteValue];
-            item.reminder	= ["Reminder:", $("reminder").value];
-            item.date     	= ["Date:", $("date").value];
-            item.notes       =  ["Note:", $("notes").value];
+            item.reminder	= ["Reminder:", bill("reminder").value];
+            item.date     	= ["Date:", bill("date").value];
+            item.notes       =  ["Note:", bill("notes").value];
          //Save data into local storage. Use stringify to convert object to a string(local storage only stores strings). 
          localStorage.setItem(id, JSON.stringify(item));
          alert("Note Saved!");
@@ -112,7 +112,7 @@ window.addEventListener("DOMContentLoaded", function() {
         	makeDiv.appendChild(makeList);
         	document.body.appendChild(makeDiv);
         // Set 'items' display
-        $("items").style.display = "block";
+        bill("items").style.display = "block";
         for(var i = 0, len=localStorage.length; i < len; i++){
             var makeli = document.createElement("li");
             var linksLi = document.createElement("li");
@@ -189,10 +189,10 @@ window.addEventListener("DOMContentLoaded", function() {
    		toggleControls("off");
    		
    		//Populate form fields with the current localStorage values.
-   		$("friends").value  = item.friend[1];
-   		$("username").value = item.userName[1];
-   		$("password").value = item.password[1];
-   		//$("confirm").value  = item.confirm[1];
+   		bill("friends").value  = item.friend[1];
+   		bill("username").value = item.userName[1];
+   		bill("password").value = item.password[1];
+   		//bill("confirm").value  = item.confirm[1];
    		var radios = document.forms[0].importance;
    		for(var i=0; i<radios.length; i++){
    			if(radios[i].value == "Really Important" && item.importance[1] == "Really Important"){
@@ -202,17 +202,17 @@ window.addEventListener("DOMContentLoaded", function() {
    			}	
    		}
    		if(item.favorite[1] == "Yes"){
-   			$('fav').setAttribute("checked","checked");
+   			bill('fav').setAttribute("checked","checked");
    		}
-   		$("reminder").value = item.reminder[1];
-   		$("date").value = item.date[1];
-   		$("notes").value = item.notes[1];
+   		bill("reminder").value = item.reminder[1];
+   		bill("date").value = item.date[1];
+   		bill("notes").value = item.notes[1];
    		
    		//Remove the inital listener from the input "save note" button 
    		save.removeEventListener("click", storeData);
    		//Change submit button calue to say edit button
-   		$("save").value = "Edit Note";
-   		var editSubmit = $("save");
+   		bill("save").value = "Edit Note";
+   		var editSubmit = bill("save");
    		//Save the key value established in this function as a property of the edit submit event
    		//So we can use that value when we save the data edited
    		editSubmit.addEventListener("click",validate);
@@ -245,9 +245,9 @@ window.addEventListener("DOMContentLoaded", function() {
    	//Validate form fields to reuse storeData function, modify and edit not save
    	function validate(e){ // e stands for event data
    		//Define elements to check
-   		var getUsername = $("username");
-   		var getPassword = $("password");
-   		var getFriend   = $("friends");
+   		var getUsername = bill("username");
+   		var getPassword = bill("password");
+   		var getFriend   = bill("friends");
    		
    		//Reset Error Messages 
    		errMsg.innerHTML ="";
@@ -266,7 +266,7 @@ window.addEventListener("DOMContentLoaded", function() {
    		}
    		
    		//Username Validation
-   		var re = /^[A-Za-z0-9_]{6,8}$/;
+   		var re = /^[A-Za-z0-9_]{6,8}bill/;
    		//User name can inlcuded Capital letter, lowercase letters, numbers and an _ . 
    		if(!re.exec(getUsername.value)){
    			var usernameError = "Please enter a valid username";
@@ -304,16 +304,16 @@ window.addEventListener("DOMContentLoaded", function() {
     var friendType = ["--Choose Friend--", "Girlfriend", "Boyfriend", "Fiance", "Friend", "Sibling", "Parent", "Other"],
    		 importanceValue,
    		 favoriteValue = "No",
-   	     errMsg = $("errors");
+   	     errMsg = bill("errors");
     ;
     makeField();
     
-    var save = $("save");
+    var save = bill("save");
     save.addEventListener("click", validate);
     
-    var displayData = $("display");
+    var displayData = bill("display");
     displayData.addEventListener("click", getData);
     
-    var clearLink = $("clear");
+    var clearLink = bill("clear");
     clearLink.addEventListener("click", clearLocal);
 });
