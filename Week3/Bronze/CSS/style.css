@@ -1,0 +1,105 @@
+/*
+Desire Revon
+MIU:Project 2
+Term:1206
+I Remember Mobile Application
+*/
+
+.mainColor {
+	background-image: -webkit-linear-gradient(bottom, rgb(0,128,136), rgb(0,148,156), rgb(0,168,176));
+}
+
+.secondaryColor {
+	background-image: -webkit-linear-gradient(bottom, rgb(147,84,22), rgb(199,136,74), rgb(250,187,25));
+}
+
+.imgSize {
+	width: 100%;
+}
+
+#home .ui-grid-a, .ui-grid-b {
+	text-align: center;
+}
+
+.indent {
+	text-indent: 40px;
+}
+
+/*
+html {
+	background:#8B7355;
+}
+
+header{
+ text-align:center;
+ margin-left:130px;
+}
+
+h2{
+	font-family: Helvetica;
+	background-color: #DDD;
+	border: 1px solid #DDD;
+	margin:20px;
+	text-align:center;
+ 	margin-right:-100px;
+	}
+
+p {
+	font-family: Helvetica;
+	font-size: 17px;
+	padding-left: 70px;
+}
+
+header{
+	color:#FFFFFF;
+}
+
+legend {
+	font-family: Helvetica;
+	background-color: #444;
+	color: #ffffff;
+	font-size: 18px;
+	text-align: center;
+}
+
+ul, li {
+	list-style-type: none;
+	font-family: Helvetica;
+	background-color: #DDD;
+	border: 1px solid #DDD;
+}
+
+fieldset {
+	background-color: #FFF8DC;
+	border-color: #00CED1;
+}
+
+textarea:focus, input:focus { 
+border: 1px solid #900; 
+background-color: #00CED1; 
+}
+
+form {
+	font-family: Helvetica;
+	color: #333333;
+	font-size: 15px;
+}
+
+#button{
+ position:center;
+}
+
+
+a{
+	font: 16px century gothic;
+	color: #FFD39B;
+	text-align: center;
+}
+
+a:hover{
+	color:#FFFFFF;
+
+*/
+	
+	
+	
