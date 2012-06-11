@@ -17,16 +17,9 @@ I Remember Mobile Application
 	width: 100%;
 }
 
-#home .ui-grid-a, .ui-grid-b {
-	text-align: center;
-}
-
 .indent {
 	text-indent: 40px;
 }
-
-
-
 
 /*
 html {
