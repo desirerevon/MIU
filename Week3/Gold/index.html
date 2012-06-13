@@ -25,10 +25,105 @@
 
 	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
 	<script src="js/libs/modernizr.custom.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
 
 </head>
 <body>
 
+<!-- Sign In Page Header -->
+   
+    <div data-role="page" id="signin">
+
+        <div data-role="header" class="secondaryColor">
+            <h1>I Remember</h1>
+        </div>
+        
+        </br>
+        
+        <!-- Sign In Page Feature -->
+        
+        <div style="text-align:center">
+             <a href="#home" data-ajax="false"><img src="images/main.png"/></a>
+        </div>
+        
+        <!-- Sign In Page Content -->
+        
+        <div data-role="content" id="siginform">
+            <p>*Fields are Required</p>
+            
+        <!-- Email Field for Login -->
+            <div data-role="fieldcontain">
+                <form action="" method="post" id="email">
+                    <label for="email">*Email:</label>
+                    <input type="text" name="email" id="email" class="required email">
+                </form>
+            </div>
+            
+         <!-- Password Field for Login --> 
+          
+            <div data-role="fieldcontain">
+                <form action="" method="post" id="pword">
+                    <label for="pword">*Password:</label>
+                    <input type="text" name="pword" id="pword" class="required ">
+                </form>
+            </div>
+        
+        </div>
+        
+        
+        <!-- Submit Buttons for Login -->
+        
+        <div data-role="fieldcontain" data-theme="a">
+            <div>
+            	<input type="submit" value="Sign In" />
+            </div>
+            
+            <div>
+                <a href="#profile" data-role="button" id="signup" data-theme="e" class="secondaryColor">Sign Up</a>
+            </div>
+            
+            </form>
+            
+        </div>
+        
+     </div>
+
+     <!-- User Profile Page Header -->
+     <div data-role="page" id="profile" data-add-back-btn="true">
+
+        <div data-role="header" data-postion="fixed" class="secondaryColor">
+            <h1>Sign Up</h1>
+        </div>
+
+        <!-- User Profile Page Feature -->
+        <div style="text-align:center">
+             <a href="" data-ajax="false"><img src=""/></a>
+        </div>
+
+        <!-- User Profile Information Page -->
+        <div data-role="content">
+	        <form action="" method="post" id="profile"
+			        <div data-role="fieldcontain">
+			            <p>*Fields are Required</p>
+			            <label for="userName">*User Name</label>
+			            <input type="text" name="userName" id="userName" value="" class="required" />
+			            <label for="email">*Email:</label>
+			            <input type="text" name="email" id="email" value="" class="required" />
+			            <label for="email">*Confirm Email:</label>
+			            <input type="text" name="email" id="emailConfrm" value="" class="required"/>
+			            <label for="password">*Password:</label>
+			            <input type="text" name="password" id="pword" value="" class="required"/>
+			            <label for="password">*Confirm Password:</label>
+			            <input type="text" name="password" id="passwordConfirm" value="" class="required"/>
+			        </div>
+				        <div>
+						  	<a href="" data-role="button" id="save" data-theme="a" class="secondaryColor">Create Account</a>
+			            </div>
+			     </div>
+		    </form>
+		</div>  		     		
+     </div>
+    
 
 		<!-- Start of Home Page -->
 		<div data-role="page" id="home"> 
@@ -48,14 +143,14 @@
 					<img class="imgSize" src="images/Feature.png" />
 				</a>
 		</div>
-
+		
 		<!--Search-->	
 		<form method="post" action="" id="searchForm">
-		  		<input type="search" name="search" id="search-basic" placeholder="Browse By" />
+		  		<input type="search" name="search" id="search-basic" data-filter="true" placeholder="Browse By" />
 		  	</form>
 
 		<!-- Browse -->
-			<div  data-role="collapsible-set" data-theme="a">
+			<div  data-role="collapsible-set" data-theme="a" data-filter="true">
 
 			<!-- Browse By Friend Type-->			
 				<div data-role="collapsible">
@@ -155,33 +250,34 @@
 
 						<li>
 							<a href="underCon.html">
-								<img src="/Users/desiregardner/Desktop/MIU/Week2/Gold/images/Favorites.png"/> 
+								<img src="/Users/desiregardner/Desktop/MIU/Week3/Gold/images/Favorites.png"/> 
 								<h4>Favorites</h4>
 							</a>
 						</li>
 
 						<li>
 							<a href="underCon.html">
-							    <img src="/Users/desiregardner/Desktop/MIU/Week2/Gold/images/Trash.png"/> 
+							    <img src="/Users/desiregardner/Desktop/MIU/Week3/Gold/images/Trash.png"/> 
 								<h4>Trash</h4>
 							</a>
 						</li>
 					</ul>
 				</div>
-				<br/>
+				
 
 		<!-- Footer -->
 		<div data-role="footer" data-position="fixed">
 			<div data-role="navbar">
 				<ul>
-					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/index.html" data-icon="home" class="secondaryColor">Home</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/index.html" data-icon="home" data-ajax="false" class="secondaryColor">Home</a></li>
 					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/about.html" data-icon="info" data-iconpos="left" class="secondaryColor">About</a></li>
 					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/news.html" data-icon="star" data-iconpos="left" class="secondaryColor">News</a></li>
 					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Bronze/index.html" data-icon="plus">Bronze</a></li>
 				</ul>
 			</div>
 		</div>
-
+		
+	
 
 	<!-- Start of Construction Page -->
 	<div data-role="page" id="underCon.html" data-add-back-btn="true">
@@ -197,14 +293,16 @@
 			<img src="images/eUnder.png" class="imgSize"/>
 
 		</div>
-		
-		 <!-- JQuery Themes -->
+	 
+        <!-- JQuery Themes -->
+        <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 
 
 		<!-- JavaScript under here -->
 		<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
-		<script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
-        <script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
-		<script type="text/javascript" src="js/main.js"></script>
+	    <script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+	    <script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
+	    <script type="text/javascript" src="js/main.js"></script>
+
 	</body>
 </html>
