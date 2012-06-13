@@ -54,7 +54,7 @@
         <!-- Email Field for Login -->
             <div data-role="fieldcontain">
                 <form action="" method="post" id="email">
-                    <label for="email">*Email:</label>
+                    <label for="email"><span class="asterisk">* </span>Email:</label>
                     <input type="text" name="email" id="email" class="required email">
                 </form>
             </div>
@@ -63,7 +63,7 @@
           
             <div data-role="fieldcontain">
                 <form action="" method="post" id="pword">
-                    <label for="pword">*Password:</label>
+                    <label for="pword"><span class="asterisk">* </span>Password:</label>
                     <input type="text" name="pword" id="pword" class="required ">
                 </form>
             </div>
@@ -105,180 +105,236 @@
 	        <form action="" method="post" id="profile"
 			        <div data-role="fieldcontain">
 			            <p>*Fields are Required</p>
-			            <label for="userName">*User Name</label>
+			            <label for="userName"><span class="asterisk">* </span>User Name</label>
 			            <input type="text" name="userName" id="userName" value="" class="required" />
-			            <label for="email">*Email:</label>
+			            <label for="email"><span class="asterisk">* </span>Email:</label>
 			            <input type="text" name="email" id="email" value="" class="required" />
-			            <label for="email">*Confirm Email:</label>
+			            <label for="email"><span class="asterisk">* </span>Confirm Email:</label>
 			            <input type="text" name="email" id="emailConfrm" value="" class="required"/>
-			            <label for="password">*Password:</label>
+			            <label for="password"><span class="asterisk">* </span>Password:</label>
 			            <input type="text" name="password" id="pword" value="" class="required"/>
-			            <label for="password">*Confirm Password:</label>
+			            <label for="password"><span class="asterisk">* </span>Confirm Password:</label>
 			            <input type="text" name="password" id="passwordConfirm" value="" class="required"/>
 			        </div>
 				        <div>
-						  	<a href="" data-role="button" id="save" data-theme="a" class="secondaryColor">Create Account</a>
+						  	<a href="#" data-role="button" id="save" data-theme="a" class="secondaryColor">Create Account</a>
 			            </div>
 			     </div>
 		    </form>
 		</div>  		     		
-     </div>
+     <!--End Of Log In and Sign Up Page-->
     
 
 		<!-- Start of Home Page -->
 		<div data-role="page" id="home"> 
 
-		<!-- Header -->
+		<!-- Home Page Header -->
 		<div data-role="header" data-position="fixed" class="secondaryColor">
 			<h1>I Remember</h1>
-
 		</div>
-
-		<!-- Home Content -->
-		<div data-role="content" >
-
-			<!-- Call to Action -->
+		
+		<!-- Feature -->
 		<div>
 				<a href="additem.html" rel="external">
 					<img class="imgSize" src="images/Feature.png" />
 				</a>
 		</div>
 		
-		<!--Search-->	
-		<form method="post" action="" id="searchForm">
-		  		<input type="search" name="search" id="search-basic" data-filter="true" placeholder="Browse By" />
-		  	</form>
-
-		<!-- Browse -->
-			<div  data-role="collapsible-set" data-theme="a" data-filter="true">
-
-			<!-- Browse By Friend Type-->			
-				<div data-role="collapsible">
-					<h3>Friend Type</h3>
-					<ul data-role="listview" data-inset="false">
-						<li>
-							<a href="underCon.html">
-								<img src="images/Friend.png"/>
-								<h4>Friend</h4>
-							</a>
-						</li>
-
-						<li>
-							<a href="underCon.html">
-								 <img src="images/Girlfriend.png"/> 
-								<h4>Girlfriend</h4>
-						    </a>
-						</li>
-
-						<li>
-							<a href="underCon.html">
-								 <img src="images/Boyfriend.png"/>
-								<h4>Boyfriend</h4>
-						    </a>
-						</li>
-
-						<li>
-							<a href="underCon.html">
-							    <img src="images/Fiance.png"/> 
-								<h4>Fiance</h4>
-							</a>
-						</li>
-
-						<li>
-							<a href="underCon.html">
-							    <img src="images/Parent.png"/> 
-								<h4>Parent</h4>
-							</a>
-						</li>
-
-						<li>
-							<a href="underCon.html">
-								<img src="images/Sibling.png"/> 
-								<h4>Sibling</h4>
-							</a>
-						</li>
-
-						<li>
-							<a href="underCon.html">
-								<img src="images/Other.png"/>
-								<h4>Other</h4>
-							</a>
-						</li>
-
-					</ul>
-				</div>
-
-				<!-- Browse by Importance-->			
-				<div data-role="collapsible">
-					<h3>Importance</h3>
-					<ul data-role="listview" data-inset="false">
-
-						<li>
-							<a href="underCon.html">
-								<!-- <img src="images/.png"/> -->
-								<h4>Really Important</h4>
-							</a>
-						</li>
-
-						<li>
-							<a href="underCon.html">
-								<!-- <img src="images/.png"/> -->
-								<h4>I can't remember everything</h4>
-							</a>
-						</li>
-					</ul>
-				</div>
-
-				<!-- Browse by Note Type-->			
-				<div data-role="collapsible">
-					<h3>Note</h3>
-					<ul data-role="listview" data-inset="false">
-
-						<li>
-							<a href="underCon.html">
-								<img src="/Users/desiregardner/Desktop/MIU/Week3/Gold/images/Recent.png"/> 
-								<h4>Recent</h4>
-							</a>
-						</li>
-
-						<li>
-							<a href="underCon.html">
-								<img src="/Users/desiregardner/Desktop/MIU/Week3/Gold/images/Shared.png"/> 
-								<h4>Shared</h4>
-							</a>
-						</li>
-
-						<li>
-							<a href="underCon.html">
-								<img src="/Users/desiregardner/Desktop/MIU/Week3/Gold/images/Favorites.png"/> 
-								<h4>Favorites</h4>
-							</a>
-						</li>
-
-						<li>
-							<a href="underCon.html">
-							    <img src="/Users/desiregardner/Desktop/MIU/Week3/Gold/images/Trash.png"/> 
-								<h4>Trash</h4>
-							</a>
-						</li>
-					</ul>
-				</div>
-				
-
-		<!-- Footer -->
+		<!-- Home Content -->
+		<div data-role="content">
+            <ul data-role="listview" data-filter="true" data-theme="a">
+                <li>
+                    <a href="#friendtype" class="has-icon" data-ajax="false">
+                        <img src="images/Friend Type.png" class="ui-li-icon"/>
+                        <h3>Friend Type</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="#prioritytype" class="has-icon" data-ajax="false">
+                        <img src="images/Priority Type.png" class="ui-li-icon"/>
+                        <h3>Priority Type</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="#notetype" class="has-icon" data-ajax="false">
+                        <img src="images/Note Type.png" class="ui-li-icon"/>
+                        <h3>Note Type</h3>
+                    </a>
+                </li>
+		</div>
+		<!-- Home Page Footer -->
 		<div data-role="footer" data-position="fixed">
 			<div data-role="navbar">
 				<ul>
 					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/index.html" data-icon="home" data-ajax="false" class="secondaryColor">Home</a></li>
 					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/about.html" data-icon="info" data-iconpos="left" class="secondaryColor">About</a></li>
 					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/news.html" data-icon="star" data-iconpos="left" class="secondaryColor">News</a></li>
-					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Bronze/index.html" data-icon="plus">Bronze</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Bronze/index.html" data-icon="plus" class="secondaryColor">Bronze</a></li>
 				</ul>
 			</div>
 		</div>
+	</div>
 		
-	
+		 <!-- Friend Type Page Header-->
+    <div data-role="page" id="friendtype">
 
+        <div data-role="header" data-position="fixed" class="secondaryColor">
+            <h1>Friend Type</h1>
+        </div>
+        <!-- I Remember Page Logo -->
+        <div style="text-align:center">
+            <a href="additem.html" data-ajax="false"><img src=""/></a>
+        </div>
+       <!-- Friend Type Page Content -->
+            <div data-role ="collapsible-set">
+            <div data-role="content">
+                <ul data-role="listview" data-filter="true">
+                <div data-role="collapsible" data-collapsed="true">
+                    <h3>Boyfriend</h3>
+                    <p>Jack favorite color is red</p>
+                </div>
+				<div data-role="collapsible" data-collapsed="true">
+                    <h3>Girlfriend</h3>
+                    <p>Pick up new shoes at shoe depot</p>
+            	</div>
+            	<div data-role="collapsible" data-collapsed="true">
+                    <h3>Parent</h3>
+                    <p>Birhtday is Friday</p>
+            	</div>
+            	<div data-role="collapsible" data-collapsed="true">
+                    <h3>Friend</h3>
+                    <p>Dont forget to return grandmothers pearls</p>
+            	</div>
+            	<div data-role="collapsible" data-collapsed="true">
+                    <h3>Fiance</h3>
+                    <p>Ring size is 7</p>
+            	</div>
+            	<div data-role="collapsible" data-collapsed="true">
+                    <h3>Sibling</h3>
+                    <p>Return alarm clock</p>
+            	</div>
+            	<div data-role="collapsible" data-collapsed="true">
+                    <h3>Other</h3>
+                    <p>Homework due Thursday</p>
+            	</div>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- Friend Page Footer -->
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/index.html" data-icon="home" data-ajax="false" class="secondaryColor">Home</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/about.html" data-icon="info" data-iconpos="left" class="secondaryColor">About</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/news.html" data-icon="star" data-iconpos="left" class="secondaryColor">News</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Bronze/index.html" data-icon="plus" class="secondaryColor">Bronze</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	 <!-- Priority Type Page Header-->
+    <div data-role="page" id="prioritytype">
+
+        <div data-role="header" data-position="fixed" class="secondaryColor">
+            <h1>Priority Type</h1>
+        </div>
+        <!-- I Remember Page Logo -->
+        <div style="text-align:center">
+            <a href="additem.html" data-ajax="false"><img src=""/></a>
+        </div>
+       <!-- Priorirty Type Page Content -->
+            <div data-role ="collapsible-set">
+            <div data-role="content">
+                <ul data-role="listview" data-filter="true">
+                <div data-role="collapsible" data-collapsed="true">
+                    <h3>Really Important</h3>
+                    <p>David</p>
+                    <p>Ring size is 9</p>
+                </div>
+				<div data-role="collapsible" data-collapsed="true">
+                    <h3>Minor</h3>
+                    <p>Sibling</p>
+                    <p>Return Alarm Clock</p>
+            	</div>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Priority Page Footer -->
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/index.html" data-icon="home" data-ajax="false" class="secondaryColor">Home</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/about.html" data-icon="info" data-iconpos="left" class="secondaryColor">About</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/news.html" data-icon="star" data-iconpos="left" class="secondaryColor">News</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Bronze/index.html" data-icon="plus" class="secondaryColor">Bronze</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	 <!-- Note Page Header-->
+    <div data-role="page" id="notetype">
+
+        <div data-role="header" data-position="fixed" class="secondaryColor">
+            <h1>Note Type</h1>
+        </div>
+        <!-- I Remember Page Logo -->
+        <div style="text-align:center">
+            <a href="additem.html" data-ajax="false"><img src=""/></a>
+        </div>
+       <!-- Note Type Page Content -->
+            <div data-role ="collapsible-set">
+            <div data-role="content">
+            	<ul data-role="listview" data-filter="true" data-theme="a">
+                <li>
+                    <a href="#recent" class="has-icon" data-ajax="false">
+                        <img src="images/Recent.png" class="ui-li-icon"/>
+                        <h3>Recent</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="#favorites" class="has-icon" data-ajax="false">
+                        <img src="images/Favorites.png" class="ui-li-icon"/>
+                        <h3>Favorites</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="#shared" class="has-icon" data-ajax="false">
+                        <img src="images/Shared.png" class="ui-li-icon"/>
+                        <h3>Shared</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="#trash" class="has-icon" data-ajax="false">
+                        <img src="images/Trash.png" class="ui-li-icon"/>
+                        <h3>Trash</h3>
+                    </a>
+                </li>
+			</div>
+            	</ul>
+        </div>
+    </div>
+</div>
+
+
+<!-- Note Type Footer -->
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/index.html" data-icon="home" data-ajax="false" class="secondaryColor">Home</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/about.html" data-icon="info" data-iconpos="left" class="secondaryColor">About</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/news.html" data-icon="star" data-iconpos="left" class="secondaryColor">News</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Bronze/index.html" data-icon="plus" class="secondaryColor">Bronze</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+                    
 	<!-- Start of Construction Page -->
 	<div data-role="page" id="underCon.html" data-add-back-btn="true">
 

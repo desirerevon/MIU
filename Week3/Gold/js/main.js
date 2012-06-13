@@ -4,24 +4,23 @@
 //I Remember Mobile Application
 
 
-
 // JQUERY VALIDATION FORM
 
-		var parseFriendForm = function(data) {
+		var parseImportanceForm = function(data) {
 		//uses form data here;
 			console.log(data);
 		};
 
 		$(document).bind('pageinit',function(){
 
-		var fform = $('#friendform');
+		var iform = $('#importanceform');
 
 			jQuery.validator.messages.required = "Required";
-			fform.validate({
+			iform.validate({
 				invalidHandler: function(form, validator) {},
 				submitHandler: function() {
-					var data = fform.serializeArray();
-					parseFriendForm(data);
+					var data = iform.serializeArray();
+					parseImportanceForm(data);
 		}
 	});
 
