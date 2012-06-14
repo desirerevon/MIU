@@ -236,7 +236,8 @@
 	
 		 <!-- Priority Type Page Header-->
     	 <div data-role="page" id="prioritytype" data-add-back-btn="true">
-    
+        
+        <!--Header-->
         <div data-role="header" class="secondaryColor">
             <h1>Priority Type</h1>
         </div>
@@ -244,7 +245,7 @@
         <!-- Priorirty Type Page Content -->
         <div data-role ="collapsible-set">
             <div data-role="content">
-                <ul data-role="listview" data-filter="true">
+                <ul data-role="listview" data-filter="true" >
                 <div data-role="collapsible" data-collapsed="true">
                     <h3>Really Important</h3>
                     <p>David</p>
@@ -259,7 +260,8 @@
         </div>
      </div>
 
-<!-- Priority Page Footer -->
+
+		<!-- Priority Page Footer -->
 		<div data-role="footer">
 			<div data-role="navbar">
 				<ul>
@@ -311,9 +313,8 @@
                     </a>
                 </li>
 			</div>
-            	</ul>
-        	</div>
-    	</div>
+        </div>
+
 
 		<!-- Note Type Footer -->
 		<div data-role="footer">
@@ -330,7 +331,7 @@
 	</div>
 		
 	
-	
+	<!--Start of Additem Page-->
         <!-- Save Note Page Header -->
     	<div data-role="page" id="savenote" data-add-back-btn="true">
 
@@ -383,11 +384,12 @@
      			<label for="radio-choice-2">I can take a guess.</label>
 			</fieldset>
 			
+			<!--Could not get flip switch to work/still testing/On/off-->
 			<div data-role="fieldcontain">
 				<label for="flip-c">Turn Reminder:</label>
 				<select name="slider" id="flip-c" data-role="slider" data-theme="a" class="ui-slider-switch">
-				<option value="no">No</option>
-				<option value="yes">Yes</option>
+				<option value="off">Off</option>
+				<option value="on">On</option>
 				</select> 
 			</div>
 
@@ -407,8 +409,7 @@
 	    		<input type="reset" value="Clear" />
 	        	<input type="submit" value="Save Note" data-theme="a" />
         	</form>
-        	</div> 
-     
+        </div> 
      <!-- End of Note Form -->
      
      <!-- Save Type Footer -->
@@ -424,20 +425,8 @@
 			</div>
 		</div>
 	</div>
-	
-		<!--Start of Image Thumbnail Page-->
-		<div data-role="page" id="thumb" data-add-back-btn="true">
-		
-		<!--Header-->
-		<div data-role="header"  class="secondaryColor">
-            <h1>Thumbnails</h1>
-        </div>
-        
-        	
-        
-        </div>
-	
-	
+				
+    	
 	<!-- Start of Construction Page -->
 	<div data-role="page" id="underCon.html" data-add-back-btn="true">
 
@@ -452,10 +441,10 @@
 			<img src="images/eUnder.png" class="imgSize"/>
 
 		</div>
+		
+	
 	 
-       
-
-		<!-- JavaScript under here -->
+       <!-- JavaScript under here -->
 		<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 	    <script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
 	    <script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
