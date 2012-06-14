@@ -6,25 +6,27 @@
 
 // JQUERY VALIDATION FORM
 
-		var parseImportanceForm = function(data) {
+		var parseSavenoteForm = function(data) {
 		//uses form data here;
 			console.log(data);
 		};
 
-		$(document).bind('pageinit',function(){
+		$(document).ready(function(){
 
-		var iform = $('#importanceform');
+		var sform = $('#savenoteform');
 
 			jQuery.validator.messages.required = "Required";
-			iform.validate({
+			sform.validate({
 				invalidHandler: function(form, validator) {},
 				submitHandler: function() {
-					var data = iform.serializeArray();
-					parseImportanceForm(data);
+					var data = sform.serializeArray();
+					parseSavenoteForm(data);
 		}
 	});
 
 });
+
+
 
 // window.addEventListener("DOMContentLoaded", function() {
 // 

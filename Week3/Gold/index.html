@@ -53,9 +53,9 @@
             
         <!-- Email Field for Login -->
             <div data-role="fieldcontain">
-                <form action="" method="post" id="email">
-                    <label for="email"><span class="asterisk">* </span>Email:</label>
-                    <input type="text" name="email" id="email" class="required email">
+                <form action="" method="post" id="username">
+                    <label for="username"><span class="asterisk">* </span>Username:</label>
+                    <input type="text" name="username" id="username" class="Required">
                 </form>
             </div>
             
@@ -64,7 +64,7 @@
             <div data-role="fieldcontain">
                 <form action="" method="post" id="pword">
                     <label for="pword"><span class="asterisk">* </span>Password:</label>
-                    <input type="text" name="pword" id="pword" class="required ">
+                    <input type="text" name="pword" id="pword" class="Required ">
                 </form>
             </div>
         
@@ -75,7 +75,7 @@
         
         <div data-role="fieldcontain" data-theme="a">
             <div>
-            	<input type="submit" value="Sign In" />
+            	<a href="#home" data-role="button" id="signin" data-theme="e" class="secondaryColor"  class="Required">Sign In</a>
             </div>
             
             <div>
@@ -110,18 +110,19 @@
 			            <label for="email"><span class="asterisk">* </span>Email:</label>
 			            <input type="text" name="email" id="email" value="" class="required" />
 			            <label for="email"><span class="asterisk">* </span>Confirm Email:</label>
-			            <input type="text" name="email" id="emailConfrm" value="" class="required"/>
+			            <input type="text" name="email" id="emailCon" value="" class="required"/>
 			            <label for="password"><span class="asterisk">* </span>Password:</label>
 			            <input type="text" name="password" id="pword" value="" class="required"/>
 			            <label for="password"><span class="asterisk">* </span>Confirm Password:</label>
-			            <input type="text" name="password" id="passwordConfirm" value="" class="required"/>
+			            <input type="text" name="password" id="passwordCon" value="" class="required"/>
 			        </div>
 				        <div>
 						  	<a href="#" data-role="button" id="save" data-theme="a" class="secondaryColor">Create Account</a>
 			            </div>
 			     </div>
 		    </form>
-		</div>  		     		
+		</div> 
+	</div>
      <!--End Of Log In and Sign Up Page-->
     
 
@@ -129,15 +130,13 @@
 		<div data-role="page" id="home"> 
 
 		<!-- Home Page Header -->
-		<div data-role="header" data-position="fixed" class="secondaryColor">
+		<div data-role="header" class="secondaryColor">
 			<h1>I Remember</h1>
 		</div>
 		
 		<!-- Feature -->
 		<div>
-				<a href="additem.html" rel="external">
-					<img class="imgSize" src="images/Feature.png" />
-				</a>
+				<a href="#savenote" rel="external"><img class="imgSize" src="images/Feature.png" /></a>
 		</div>
 		
 		<!-- Home Content -->
@@ -161,30 +160,29 @@
                         <h3>Note Type</h3>
                     </a>
                 </li>
+            </ul>
 		</div>
 		<!-- Home Page Footer -->
-		<div data-role="footer" data-position="fixed">
+		<div data-role="footer">
 			<div data-role="navbar">
 				<ul>
-					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/index.html" data-icon="home" data-ajax="false" class="secondaryColor">Home</a></li>
-					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/about.html" data-icon="info" data-iconpos="left" class="secondaryColor">About</a></li>
-					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/news.html" data-icon="star" data-iconpos="left" class="secondaryColor">News</a></li>
-					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Bronze/index.html" data-icon="plus" class="secondaryColor">Bronze</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/index.html" data-icon="home" class="secondaryColor">Home</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/about.html" data-icon="info"  data-iconpos="left" class="secondaryColor">About</a></li>
+				    <li><a href="#savenote" data-icon="plus" data-iconpos="top">Note</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/news.html" data-icon="star"  data-iconpos="left" class="secondaryColor">News</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Bronze/index.html" data-icon="plus"  class="secondaryColor">Bronze</a></li>
 				</ul>
 			</div>
 		</div>
 	</div>
 		
 		 <!-- Friend Type Page Header-->
-    <div data-role="page" id="friendtype">
+        <div data-role="page" id="friendtype" data-add-back-btn="true">
 
-        <div data-role="header" data-position="fixed" class="secondaryColor">
+        <div data-role="header" class="secondaryColor">
             <h1>Friend Type</h1>
         </div>
-        <!-- I Remember Page Logo -->
-        <div style="text-align:center">
-            <a href="additem.html" data-ajax="false"><img src=""/></a>
-        </div>
+        
        <!-- Friend Type Page Content -->
             <div data-role ="collapsible-set">
             <div data-role="content">
@@ -222,30 +220,29 @@
     </div>
     
     <!-- Friend Page Footer -->
-		<div data-role="footer" data-position="fixed">
+		<div data-role="footer">
 			<div data-role="navbar">
 				<ul>
-					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/index.html" data-icon="home" data-ajax="false" class="secondaryColor">Home</a></li>
-					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/about.html" data-icon="info" data-iconpos="left" class="secondaryColor">About</a></li>
-					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/news.html" data-icon="star" data-iconpos="left" class="secondaryColor">News</a></li>
-					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Bronze/index.html" data-icon="plus" class="secondaryColor">Bronze</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/index.html" data-icon="home" class="secondaryColor">Home</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/about.html" data-icon="info"  data-iconpos="left" class="secondaryColor">About</a></li>
+				    <li><a href="#savenote" data-icon="plus" data-iconpos="top" >Note</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/news.html" data-icon="star"  data-iconpos="left" class="secondaryColor">News</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Bronze/index.html" data-icon="plus"  class="secondaryColor">Bronze</a></li>
 				</ul>
 			</div>
 		</div>
 	</div>
+		
 	
-	 <!-- Priority Type Page Header-->
-    <div data-role="page" id="prioritytype">
-
-        <div data-role="header" data-position="fixed" class="secondaryColor">
+		 <!-- Priority Type Page Header-->
+    	 <div data-role="page" id="prioritytype" data-add-back-btn="true">
+    
+        <div data-role="header" class="secondaryColor">
             <h1>Priority Type</h1>
         </div>
-        <!-- I Remember Page Logo -->
-        <div style="text-align:center">
-            <a href="additem.html" data-ajax="false"><img src=""/></a>
-        </div>
-       <!-- Priorirty Type Page Content -->
-            <div data-role ="collapsible-set">
+        
+        <!-- Priorirty Type Page Content -->
+        <div data-role ="collapsible-set">
             <div data-role="content">
                 <ul data-role="listview" data-filter="true">
                 <div data-role="collapsible" data-collapsed="true">
@@ -260,34 +257,33 @@
             	</div>
             </ul>
         </div>
-    </div>
-</div>
+     </div>
 
 <!-- Priority Page Footer -->
-		<div data-role="footer" data-position="fixed">
+		<div data-role="footer">
 			<div data-role="navbar">
 				<ul>
-					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/index.html" data-icon="home" data-ajax="false" class="secondaryColor">Home</a></li>
-					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/about.html" data-icon="info" data-iconpos="left" class="secondaryColor">About</a></li>
-					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/news.html" data-icon="star" data-iconpos="left" class="secondaryColor">News</a></li>
-					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Bronze/index.html" data-icon="plus" class="secondaryColor">Bronze</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/index.html" data-icon="home" class="secondaryColor">Home</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/about.html" data-icon="info"  data-iconpos="left" class="secondaryColor">About</a></li>
+				    <li><a href="#savenote" data-icon="plus" data-iconpos="top">Note</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/news.html" data-icon="star"  data-iconpos="left" class="secondaryColor">News</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Bronze/index.html" data-icon="plus"  class="secondaryColor">Bronze</a></li>
 				</ul>
 			</div>
 		</div>
 	</div>
+		
 	
 	 <!-- Note Page Header-->
-    <div data-role="page" id="notetype">
-
-        <div data-role="header" data-position="fixed" class="secondaryColor">
+    	<div data-role="page" id="notetype" data-add-back-btn="true">
+    
+	<!--Note Type Header-->
+        <div data-role="header"  class="secondaryColor">
             <h1>Note Type</h1>
         </div>
-        <!-- I Remember Page Logo -->
-        <div style="text-align:center">
-            <a href="additem.html" data-ajax="false"><img src=""/></a>
-        </div>
+        
        <!-- Note Type Page Content -->
-            <div data-role ="collapsible-set">
+        <div data-role ="collapsible-set">
             <div data-role="content">
             	<ul data-role="listview" data-filter="true" data-theme="a">
                 <li>
@@ -316,30 +312,134 @@
                 </li>
 			</div>
             	</ul>
-        </div>
-    </div>
-</div>
+        	</div>
+    	</div>
 
-
-<!-- Note Type Footer -->
-		<div data-role="footer" data-position="fixed">
+		<!-- Note Type Footer -->
+		<div data-role="footer">
 			<div data-role="navbar">
 				<ul>
-					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/index.html" data-icon="home" data-ajax="false" class="secondaryColor">Home</a></li>
-					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/about.html" data-icon="info" data-iconpos="left" class="secondaryColor">About</a></li>
-					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/news.html" data-icon="star" data-iconpos="left" class="secondaryColor">News</a></li>
-					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Bronze/index.html" data-icon="plus" class="secondaryColor">Bronze</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/index.html" data-icon="home" class="secondaryColor">Home</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/about.html" data-icon="info"  data-iconpos="left" class="secondaryColor">About</a></li>
+				    <li><a href="#savenote" data-icon="plus" data-iconpos="top" >Note</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/news.html" data-icon="star"  data-iconpos="left" class="secondaryColor">News</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Bronze/index.html" data-icon="plus"  class="secondaryColor">Bronze</a></li>
 				</ul>
 			</div>
 		</div>
 	</div>
+		
+	
+	
+        <!-- Save Note Page Header -->
+    	<div data-role="page" id="savenote" data-add-back-btn="true">
 
-                    
+        <div data-role="header" data-postion="fixed" class="secondaryColor">
+            <h1>Save Note</h1>
+        </div>
+
+        
+        <!-- Save Note Page Content -->
+        
+        <div data-role="content">
+        
+        	<form action="" method="post" id="savenoteform">
+        	
+        	<div data-role="fieldcontain">
+				<label for="select-choice-0" class="select">Choose A Friend:</label>
+				<select name="select-choice-0" id="select-choice-1">
+  					<option value="default">Select</option>
+                	<option value="boy">Boyfriend</option>
+   					<option value="girl">Girlfriend</option>
+  					<option value="par">Parent</option>
+  					<option value="fri">Friend</option>
+  					<option value="fi">Fiance</option>
+  					<option value="sib">Sibling</option>
+  					<option value="oth">Other</option>
+				</select>
+			</div>
+			
+			<div data-role="fieldcontain">
+    			<fieldset data-role="controlgroup">
+	   			<legend>Did you select the right friend?</legend>
+	   				<input type="checkbox" name="checkbox-1" id="checkbox-1" class="custom" checked="checked"/>
+	   				<label for="checkbox-1">Yes</label>
+	   				<input type="checkbox" name="checkbox-2" id="checkbox-2" class="custom" />
+	   				<label for="checkbox-2">No</label>
+    			</fieldset>
+			</div>
+			
+			<div>
+	        		<label for="note">Note:</label>
+	        		<textarea></textarea> 
+	        	</div>
+	        	
+	        		
+			<fieldset data-role="controlgroup">
+				<legend>How importance is this?</legend>
+     			<input type="radio" name="radio-choice-1" id="radio-choice-1" value="choice-1" checked="checked" />
+     			<label for="radio-choice-1">Really Important!</label>
+
+     			<input type="radio" name="radio-choice-1" id="radio-choice-2" value="choice-2"  />
+     			<label for="radio-choice-2">I can take a guess.</label>
+			</fieldset>
+			
+			<div data-role="fieldcontain">
+	        		<label for="reminder">Reminder:</label>
+	        		<select data-role="slider" name="reminder" id="reminder">
+	        			<option value="On">On</option>
+	        			<option value="Off">Off</option>
+	        		</select>
+	        	</div>
+		
+				<div data-role="fieldcontain">
+	        		<label for="quantity">Remind Me This Many Times:</label>
+	        		<input type="range" name="quantity" id="quantity" value="0" min="1" max="10"/>
+	        	
+	        		<label for="reminderdate">On This Day:</label><input type="date" placeholder="YYYY-MM-DD" id="reminderdate" name="reminderdate" data-role="datebox" data-options='{"mode": "calbox"}' data-transition="slideup" class="required" />
+	        	</div>
+	        	
+	        	
+	        	<input type="reset" value="Clear" />
+	        	<input type="submit" value="Save Note" data-theme="a" />
+        	</form>
+        	
+        </div> 
+     
+     <!-- End of Note Form -->
+     
+     <!-- Save Type Footer -->
+		<div data-role="footer">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/index.html" data-icon="home" class="secondaryColor">Home</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/about.html" data-icon="info"  data-iconpos="left" class="secondaryColor">About</a></li>
+				    <li><a href="#savenote" data-icon="plus" data-iconpos="top" >Note</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/news.html" data-icon="star"  data-iconpos="left" class="secondaryColor">News</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Bronze/index.html" data-icon="plus"  class="secondaryColor">Bronze</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+		<!--Start of Image Thumbnail Page-->
+		<div data-role="page" id="thumb" data-add-back-btn="true">
+		
+		<!--Header-->
+		<div data-role="header"  class="secondaryColor">
+            <h1>Thumbnails</h1>
+        </div>
+        
+        	
+        
+        </div>
+	
+	
 	<!-- Start of Construction Page -->
 	<div data-role="page" id="underCon.html" data-add-back-btn="true">
 
 		<!-- Header -->
-		<div data-role="header" data-position="fixed">
+		<div data-role="header" >
 			<h1>Under Construction</h1>
 		</div>
 
@@ -350,15 +450,15 @@
 
 		</div>
 	 
-        <!-- JQuery Themes -->
-        <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-
+       
 
 		<!-- JavaScript under here -->
 		<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 	    <script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
 	    <script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
-	    <script type="text/javascript" src="js/main.js"></script>
+        <script src="js/main.js" type="text/javascript"></script>
+        
+      
 
 	</body>
 </html>
