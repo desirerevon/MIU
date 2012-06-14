@@ -21,6 +21,9 @@ mainColor {
 	text-indent: 40px;
 }
 
+label.error{display:block; margin:1px 0; color:#cc0000;}
+
+#rgerrorslink{display:none;}
 
 
 

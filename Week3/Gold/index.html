@@ -55,7 +55,7 @@
             <div data-role="fieldcontain">
                 <form action="" method="post" id="username">
                     <label for="username"><span class="asterisk">* </span>Username:</label>
-                    <input type="text" name="username" id="username" class="Required">
+                    <input type="text" placeholder="Username" name="username" id="username" class="Required">
                 </form>
             </div>
             
@@ -64,7 +64,7 @@
             <div data-role="fieldcontain">
                 <form action="" method="post" id="pword">
                     <label for="pword"><span class="asterisk">* </span>Password:</label>
-                    <input type="text" name="pword" id="pword" class="Required ">
+                    <input type="text" placeholder="Password" name="pword" id="pword" class="Required ">
                 </form>
             </div>
         
@@ -136,7 +136,7 @@
 		
 		<!-- Feature -->
 		<div>
-				<a href="#savenote" rel="external"><img class="imgSize" src="images/Feature.png" /></a>
+				<a href="#signin" rel="external"><img class="imgSize" src="images/Feature.png" /></a>
 		</div>
 		
 		<!-- Home Content -->
@@ -225,7 +225,7 @@
 				<ul>
 					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/index.html" data-icon="home" class="secondaryColor">Home</a></li>
 					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/about.html" data-icon="info"  data-iconpos="left" class="secondaryColor">About</a></li>
-				    <li><a href="#savenote" data-icon="plus" data-iconpos="top" >Note</a></li>
+				    <li><a href="#savenote" data-icon="plus" data-iconpos="top">Note</a></li>
 					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/news.html" data-icon="star"  data-iconpos="left" class="secondaryColor">News</a></li>
 					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Bronze/index.html" data-icon="plus"  class="secondaryColor">Bronze</a></li>
 				</ul>
@@ -341,14 +341,13 @@
         
         <!-- Save Note Page Content -->
         
-        <div data-role="content">
+        <div data-role="content" data-theme="a">
         
         	<form action="" method="post" id="savenoteform">
         	
         	<div data-role="fieldcontain">
-				<label for="select-choice-0" class="select">Choose A Friend:</label>
-				<select name="select-choice-0" id="select-choice-1">
-  					<option value="default">Select</option>
+				<label for="Choose A Friend" class="select" >Choose A Friend:</label>
+				<select name="Choose A Friend" id="select-choice-1" data-mini="true">
                 	<option value="boy">Boyfriend</option>
    					<option value="girl">Girlfriend</option>
   					<option value="par">Parent</option>
@@ -371,8 +370,8 @@
 			
 			<div>
 	        		<label for="note">Note:</label>
-	        		<textarea></textarea> 
-	        	</div>
+					<textarea name="friendnote" id="textarea" placeholder="Your note goes here" class="required"></textarea>
+	        </div>
 	        	
 	        		
 			<fieldset data-role="controlgroup">
@@ -385,26 +384,30 @@
 			</fieldset>
 			
 			<div data-role="fieldcontain">
-	        		<label for="reminder">Reminder:</label>
-	        		<select data-role="slider" name="reminder" id="reminder">
-	        			<option value="On">On</option>
-	        			<option value="Off">Off</option>
-	        		</select>
-	        	</div>
-		
+				<label for="flip-c">Turn Reminder:</label>
+				<select name="slider" id="flip-c" data-role="slider" data-theme="a" class="ui-slider-switch">
+				<option value="no">No</option>
+				<option value="yes">Yes</option>
+				</select> 
+			</div>
+
+			
+		 	<div data-role="fieldcontain">		
+						<label for="reminder">Number of times:</label>
+						<input type="range" name="reminder" id="reminder" value="0" min="1" max="10" />
+					</div>	
+					
 				<div data-role="fieldcontain">
-	        		<label for="quantity">Remind Me This Many Times:</label>
-	        		<input type="range" name="quantity" id="quantity" value="0" min="1" max="10"/>
+					<label for="date">On This Day:</label>
+					<input type="text" name="remindme" id="date" placeholder="MM/DD/YY" class="required date" />
+				</div>
+
 	        	
-	        		<label for="reminderdate">On This Day:</label><input type="date" placeholder="YYYY-MM-DD" id="reminderdate" name="reminderdate" data-role="datebox" data-options='{"mode": "calbox"}' data-transition="slideup" class="required" />
-	        	</div>
-	        	
-	        	
-	        	<input type="reset" value="Clear" />
+	    	<div>   	
+	    		<input type="reset" value="Clear" />
 	        	<input type="submit" value="Save Note" data-theme="a" />
         	</form>
-        	
-        </div> 
+        	</div> 
      
      <!-- End of Note Form -->
      
