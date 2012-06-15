@@ -20,7 +20,7 @@
 
 	<!-- StyleSheets under here -->
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
-	<link rel="stylesheet" href="css/brstyle.css" />
+	<link rel="stylesheet" href="CSS/style.css" />
 
 
 	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
@@ -29,9 +29,9 @@
 </head>
 <body>
 
-<div data-role="page" id="news" data-theme="d" data-add-back-btn="true" >
-		<div data-role="header" data-position="fixed" >
-				<h2><a href="/Users/desiregardner/Desktop/MIU/Week3/Bronze/index.html" class="newText" >News</a></h2>
+<div data-role="page" id="news" data-theme="d" data-add-back-btn="true">
+		<div data-role="header" >
+				<h2><a href="#home" class="newText" >News</a></h2>
 				<small><center>Click News To Return Home</center></small>	
 		</div>
 		<div data-role="content">
@@ -49,7 +49,7 @@
 								<p class="ui-li-aside"><strong>6/7/2012</strong></p>
 							</a>
 						</li>
-						<li>
+						<li >
 							<a href="http://womanoftheearth.blogspot.com/2012/03/seil-bag-exceptional-bikers-bag.html" rel="external" data-ajax="true">
 							<img src="/Users/desiregardner/Desktop/MIU/Week3/Gold/images/seil.png" class="imgSize"/>
 								<h3>The Seil Bag</h3>
@@ -79,19 +79,19 @@
 					</ul>	
 			</section>
 		</div>
-		
-		<!-- Footer -->
-		<div data-role="footer" data-position="fixed">
+		    
+<!-- Footer -->
+		<div data-role="footer">
 			<div data-role="navbar">
 				<ul>
-					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/index.html" data-icon="home" data-ajax="false">Home</a></li>
-					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Bronze/about.html" data-icon="info" data-iconpos="left">About</a></li>
-					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Bronze/news.html" data-icon="star" data-iconpos="left">News</a></li>
-					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/index.html" data-icon="plus">Gold</a></li>
+					<li><a href="#home" data-icon="home" class="secondaryColor">Home</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/about.html" data-icon="info"  data-iconpos="left" class="secondaryColor">About</a></li>
+				    <li><a href="#savenote" data-icon="plus" data-iconpos="top" data-ajax="false">Note</a></li>
+				    <li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/thumbs.html" data-icon="grid" data-iconpos="top" class="secondaryColor">Thumb</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Bronze/index.html" data-icon="plus"  class="secondaryColor">Bronze</a></li>
 				</ul>
 			</div>
 		</div>
 	</div>
-	
-	</body>
+</body>
 </html>

@@ -5,27 +5,12 @@ Term:1206
 I Remember Mobile Application
 */
 
-.mainColor {
-	background-image: -webkit-linear-gradient(bottom, rgb(0,128,136), rgb(0,148,156), rgb(0,168,176));
-}
 
 .secondaryColor {
 	background-image: -webkit-linear-gradient(bottom, rgb(147,84,22), rgb(199,136,74), rgb(250,187,25));
 }
 
-.imgSize {
-	width: 100%;
-}
 
-#home .ui-grid-a, .ui-grid-b {
-	text-align: center;
-}
-
-.indent {
-	text-indent: 40px;
-}
-
-/*
 html {
 	background:#8B7355;
 }
@@ -50,7 +35,7 @@ p {
 	padding-left: 70px;
 }
 
-header{
+header{s
 	color:#FFFFFF;
 }
 
@@ -97,9 +82,8 @@ a{
 }
 
 a:hover{
-	color:#FFFFFF;
+	color:#FFB90F;
 
-*/
 	
 	
 	

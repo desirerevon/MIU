@@ -32,19 +32,10 @@
 	<div data-role="page" id="home">
 
 		<!-- Header -->
-		<div data-role="header" data-position="fixed">
+		<div data-role="header">
 			<h1>I Remember</h1>
 		</div>
 
-		<!--Search Box-->
-		<div id="search">
-			<center>
-				<!--Links to underCon page-->
-				<form method="get" action="underCon.html"> 
-					<input type="text" name="Mynote" alt="Search" value="" maxlength="200" size="50" vspace="60px" />
-					<input type="submit" name="noteSearch" value="Find A Note" />
-				</form>
-		</div>
 
 		<!-- Home Content -->
 		<div data-role="content">
@@ -57,41 +48,81 @@
 			</div>
 
 			<!-- Browse -->
-			<div class="ui-grid-a">
+			<ul data-role="listview" data-filter="true" data-inset="true" data-theme="d" data-divider-theme="a" data-count-theme="b">
 
-				<div class="ui-block-b" >
-					<a href="underCon.html">
-					<img src="/Users/desiregardner/Desktop/MIU/Week3/Bronze/images/Recent.jpg"/>
-					</a>
-					<p>Recent</p>
-				</div>
+					<li><a href="#one">
+						<h3>Friend Type</h3>
+					</a></li>
 
-				<div class="ui-block-b" >
-					<a href="underCon.html">
-					<img src="/Users/desiregardner/Desktop/MIU/Week3/Bronze/images/Shared.jpg"/>
-					</a>
-					<p>Shared</p>
-				</div>
+					<li><a href="#two">
+						<h3>Priority Type</h3>
+					</a></li>				
 
-				<div class="ui-block-b" >
-					<a href="underCon.html">
-					<img src="/Users/desiregardner/Desktop/MIU/Week3/Bronze/images/Favorites.jpg"/>
-					</a>
-					<p>Favorites</p>
-				</div>
+					<li><a href="#three">
+						<h3>Note Type</h3>
+					</a></li>
+					
+				</ul>
+			</div>
+			
+			<!-- Footer -->
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/index.html" data-icon="home" data-ajax="false">Home</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Bronze/about.html" data-icon="info" data-iconpos="left" >About</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Bronze/news.html" data-icon="star" data-iconpos="left">News</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/index.html" data-icon="plus">Gold</a></li>
+				</ul>
+			</div>
+		</div>
+</div>
+			
+			<!-- Friend Type -->
+		<div data-role="page" id="one" data-add-back-btn="true">
 
-				<div class="ui-block-b">
-					<a href="underCon.html">
-					<img src="/Users/desiregardner/Desktop/MIU/Week3/Bronze/images/Trash.jpg"/>
-					</a>
-					<p>Trash</p>
-				</div>
+			<div data-role="header">
+				<h1>Friend Type</h1>
 			</div>
 
-		</div>
+				<div data-role="collapsible" data-collapsed="false">
+					<h3>Boyfriend</h3>
+					<p>Favorite color is red</p>
+				</div>
 
-		<!-- Footer -->
-		<div data-role="footer" data-position="fixed">
+				<div data-role="collapsible">
+					<h3>Girlfriend</h3>
+					<p>Favorite color is pink</p>
+				</div>
+
+				<div data-role="collapsible">
+					<h3>Parent</h3>
+					<p>Birthday is on friday</p>
+				</div>
+
+				<div data-role="collapsible">
+					<h3>Friend</h3>
+					<p>Return red dress you borrowed</p>
+				</div>
+
+				<div data-role="collapsible">
+					<h3>Fiance</h3>
+					<p>Ring size is 6</p>
+				</div>
+
+				<div data-role="collapsible">
+					<h3>Sibling</h3>
+					<p>Pick up brother from the airport</p>
+				</div>
+
+				<div data-role="collapsible">
+					<h3>Other</h3>
+					<p>Concert is on the 26th of july</p>
+				</div>
+			</div>
+			
+			<!-- Footer -->
+		<div data-role="footer">
 			<div data-role="navbar">
 				<ul>
 					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/index.html" data-icon="home" data-ajax="false">Home</a></li>
@@ -103,9 +134,27 @@
 		</div>
 
 	</div>
+			
+			<!-- Priority Type -->
+		<div data-role="page" id="two" data-add-back-btn="true">
 
-		<!-- Footer -->
-		<div data-role="footer" data-position="fixed">
+			<div data-role="header">
+				<h1>Priority Type</h1>
+			</div>
+
+				<div data-role="collapsible" data-collapsed="false">
+					<h3>Really Important</h3>
+					<p>Wedding rehearsal is on tuesday at the loft</p>
+				</div>
+
+				<div data-role="collapsible">
+					<h3>I cant remember everyting</h3>
+					<p>Pick up soda for party</p>
+				</div>
+			</div>
+			
+					<!-- Footer -->
+		<div data-role="footer">
 			<div data-role="navbar">
 				<ul>
 					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/index.html" data-icon="home" data-ajax="false">Home</a></li>
@@ -115,6 +164,46 @@
 				</ul>
 			</div>
 		</div>
+
+	</div>
+			
+			
+			<!-- Note Type -->
+		<div data-role="page" id="three" data-add-back-btn="true">
+
+			<div data-role="header" data-position="fixed">
+				<h1>Note Type</h1>
+			</div>
+
+				<div data-role="collapsible" data-collapsed="false">
+					<h3>Recent</h3>
+				</div>
+
+				<div data-role="collapsible">
+					<h3>Favorite</h3>
+				</div>
+
+				<div data-role="collapsible">
+					<h3>Shared</h3>
+				</div>
+
+				<div data-role="collapsible">
+					<h3>Trash</h3>
+				</div>
+			</div>
+
+		<!-- Footer -->
+		<div data-role="footer">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/index.html" data-icon="home" data-ajax="false">Home</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Bronze/about.html" data-icon="info" data-iconpos="left">About</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Bronze/news.html" data-icon="star" data-iconpos="left">News</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/index.html" data-icon="plus">Gold</a></li>
+				</ul>
+			</div>
+		</div>
+
 	</div>
 
 	<!-- Start of About App Page -->
@@ -148,6 +237,20 @@
 			</div>
 
 		</div>
+		
+		<div data-role="fieldcontain">
+				<a href="<div data-role="footer">
+			   <div data-role="navbar">
+				  <ul>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/index.html" data-icon="home" data-ajax="false">Home</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Bronze/about.html" data-icon="info"  data-iconpos="left" class="secondaryColor">About</a></li>
+				    <li><a href="#savenote" data-icon="plus" data-iconpos="top">Note</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Bronze/news.html" data-icon="star"  data-iconpos="left" class="secondaryColor">News</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/index.html" data-icon="plus"  cdata-iconpos="left" class="secondaryColor">Bronze</a></li>
+				  </ul>
+			  </div>
+		 </div>
+			</div>
 
 		<!-- Footer -->
 		<div data-role="footer" data-position="fixed">
