@@ -40,14 +40,15 @@ window.addEventListener("DOMContentLoaded", function() {
     }
 
 	//Get Selected CheckBox Value
-    function getCheckboxValue() {
-        if($("fav").checked){
-          favoriteValue = $("fav").value;
-        } else {
-            favoriteValue = "No";
-        }
-    }
-     //Turn on and off form by use of case during getData()
+   //  function getCheckboxValue() {
+//         if($("fav").checked){
+//           favoriteValue = $("fav").value;
+//         } else {
+//             favoriteValue = "No";
+//         }
+//     }
+    
+    //Turn on and off form by use of case during getData()
      function toggleControls(n) {
         switch(n){
             case "on":
@@ -82,11 +83,11 @@ window.addEventListener("DOMContentLoaded", function() {
         		id = key;
         }
         getSelectedRadio();
-        getCheckboxValue();
+        //getCheckboxValue();
         var item          	= {};
         	item.friend	  	= ["Friend:", $("friends").value];
-            item.userName 	= ["Username:", $("username").value];
-            item.password 	= ["Password:", $("password").value];
+            //item.username 	= ["Username:", $("username").value];
+            //item.password 	= ["Password:", $("password").value];
             item.importance = ["Importance:", importanceValue];
             item.favorite   = ["Is right friend:", favoriteValue];
             item.reminder	= ["Reminder:", $("reminder").value];
@@ -123,7 +124,7 @@ window.addEventListener("DOMContentLoaded", function() {
             var obj = JSON.parse(value);
             var makeSubList = document.createElement("ul");
             makeli.appendChild(makeSubList);
-            getImage(obj.friend[1], makeSubList);
+            //getImage(obj.friend[1], makeSubList);
             for(var n in obj){
             var makeSubli = document.createElement("li");
             makeSubList.appendChild(makeSubli);
@@ -135,16 +136,56 @@ window.addEventListener("DOMContentLoaded", function() {
         }
     }
     //Get the image for the right friend that's being displayed.
-   function getImage(imgName, makeSubList) {
-		var imageLi = document.createElement('li');
-		makeSubList.appendChild(imageLi);
-		var newImage = document.createElement('img');
-		var setSrc = newImage.setAttribute("src", "images/" + imgName + ".png");
-		newImage.style.paddingTop = "10px";
-		imageLi.appendChild(newImage);
-	}
-    
+  //  function getImage(imgName, makeSubList) {
+// 		var imageLi = document.createElement('li');
+// 		makeSubList.appendChild(imageLi);
+// 		var newImage = document.createElement('img');
+// 		var setSrc = newImage.setAttribute("src", "images/" + imgName + ".png");
+// 		newImage.style.paddingTop = "10px";
+// 		imageLi.appendChild(newImage);
+// 	}
+     
+	//Auto Populate Local Storage
      function autoFillData() {
+     			var  json = {
+	"notebook1": {
+		"friend"  : ["Friend:", "Boyfriend"],
+		"userName": ["Username:", "Desire"],
+		"password": ["Password:", "mypass"],
+	  "importance": ["Importance:", "Really Important"],
+	    "favorite": ["Is right friend:", "Yes"],
+	    "reminder": ["Reminder:", "7"],
+	       "date" : ["Date:","2012-05-24"],
+	       "notes": ["Note:","Ring Size 9"]
+		
+	},
+
+	"notebook2": {
+		  "friend": ["Friend:", "Girlfriend"],
+		"userName": ["Username:", "David"],
+		"password": ["Password:", "hispass"],
+	  "importance": ["Importance:", "I can't remember everything"],
+	    "favorite": ["Is right friend:", "Yes"],
+	    "reminder": ["Reminder:", "10"],
+	       "date" : ["Date:","2012-07-05"],
+	       "notes": ["Note:","favorite color pink"]
+		
+	},
+
+	"notebook3": {
+		  "friend": ["Friend:", "Parent"],
+		"userName": ["Username:", "Dominique"],
+		"password": ["Password:", "herpass"],
+	  "importance": ["Importance:", "Really Important"],
+	    "favorite": ["Is right friend:", "Yes"],
+	    "reminder": ["Reminder:", "10"],
+	       "date" : ["Date:","2013-08-03"],
+	       "notes": ["Note","Moms birthday is December 13th"]
+		
+	}
+	
+	};
+
 		// The actual actual JSON OBJECT data required for this to work is coming from out JSON. js file which is loaded to out HTML page.
 		// Store the JSON Object into local storage.
 		for(var n in json){
@@ -190,8 +231,8 @@ window.addEventListener("DOMContentLoaded", function() {
    		
    		//Populate form fields with the current localStorage values.
    		$("friends").value  = item.friend[1];
-   		$("username").value = item.userName[1];
-   		$("password").value = item.password[1];
+   		//$("username").value = item.userName[1];
+   		//$("password").value = item.password[1];
    		//$("confirm").value  = item.confirm[1];
    		var radios = document.forms[0].importance;
    		for(var i=0; i<radios.length; i++){
@@ -246,8 +287,8 @@ window.addEventListener("DOMContentLoaded", function() {
    	function validate(e){ // e stands for event data
    		//Define elements to check
    		var getUsername = $("username");
-   		var getPassword = $("password");
-   		var getFriend   = $("friends");
+   		//var getPassword = $("password");
+   		//var getFriend   = $("friends");
    		
    		//Reset Error Messages 
    		errMsg.innerHTML ="";
@@ -266,20 +307,20 @@ window.addEventListener("DOMContentLoaded", function() {
    		}
    		
    		//Username Validation
-   		var re = /^[A-Za-z0-9_]{6,8}$/;
+   		//var re = /^[A-Za-z0-9_]{6,8}$/;
    		//User name can inlcuded Capital letter, lowercase letters, numbers and an _ . 
-   		if(!re.exec(getUsername.value)){
-   			var usernameError = "Please enter a valid username";
-   			getUsername.style.border = "1px solid red"; 
-   			messageAry.push(usernameError);
-   		}
-   		
+   		// if(!re.exec(getUsername.value)){
+//    			var usernameError = "Please enter a valid username";
+//    			getUsername.style.border = "1px solid red"; 
+//    			messageAry.push(usernameError);
+//    		}
+//    		
    		//Password Validation
-		if(getPassword.value=== ""){
-			var passwordError = "Please enter your Password.";
-			getPassword.style.border = "1px solid red";
-			messageAry.push(passwordError);
-		}
+		// if(getPassword.value=== ""){
+// 			var passwordError = "Please enter your Password.";
+// 			getPassword.style.border = "1px solid red";
+// 			messageAry.push(passwordError);
+// 		}
    		
    		//If there are errors display them on the screen
    		//If there were errors, display them on the screen
