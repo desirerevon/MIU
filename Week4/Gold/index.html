@@ -32,7 +32,7 @@
    
     <div data-role="page" id="signin">
 
-        <div data-role="header" class="secondaryColor">
+        <div data-role="header" class="secondaryColor" data-postion="fixed">
             <h1>I Remember</h1>
         </div>
         
@@ -47,7 +47,7 @@
         <!-- Sign In Page Content -->
         
         <div data-role="content" id="siginform">
-            <p>*Fields are Required</p>
+           <p>Field with ( * ) are required.</p>
             
         <!-- Email Field for Login -->
             <div data-role="fieldcontain">
@@ -89,7 +89,7 @@
      <!-- User Profile Page Header -->
      <div data-role="page" id="profile" data-add-back-btn="true">
 
-        <div data-role="header" class="secondaryColor" data-add-back-btn="true">
+        <div data-role="header" class="secondaryColor" data-add-back-btn="true" data-postion="fixed">
             <h1>Sign Up</h1>
         </div>
 
@@ -102,7 +102,7 @@
         <div data-role="content">
 	        <form action="" method="post" id="profile"
 			        <div data-role="fieldcontain">
-			            <p>*Fields are Required</p>
+			            <p>Field with ( * ) are required.</p>
 			            <label for="userName"><span class="asterisk">* </span>User Name</label>
 			            <input type="text" name="userName" id="userName" value="" class="required" />
 			            <label for="email"><span class="asterisk">* </span>Email:</label>
@@ -128,7 +128,7 @@
 		<div data-role="page" id="home"> 
 
 		<!-- Home Page Header -->
-		<div data-role="header" class="secondaryColor">
+		<div data-role="header" class="secondaryColor" data-postion="fixed">
 			<h1>I Remember</h1>
 		</div>
 		
@@ -162,23 +162,24 @@
 		</div>
 		
 		<!-- Home Page Footer -->
-				<div data-role="footer">
-			<div data-role="navbar">
-				<ul>
+			<div data-role="footer" data-postion="fixed">
+			   <div data-role="navbar">
+				  <ul>
 					<li><a href="#home" data-icon="home" data-iconpos="left" class="secondaryColor">Home</a></li>
-					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/about.html" data-icon="info"  data-iconpos="left" class="secondaryColor">About</a></li>
-				    <li><a href="#savenote" data-icon="plus" data-iconpos="top">Note</a></li>
-					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/news.html" data-icon="star"  data-iconpos="left" class="secondaryColor">News</a></li>
-					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Bronze/index.html" data-icon="plus"  cdata-iconpos="left" class="secondaryColor">Bronze</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>	
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week4/Gold/about.html" data-icon="info"  data-iconpos="left" class="secondaryColor">About</a></li>
+				    <li><a href="/Users/desiregardner/Desktop/MIU/Week4/Gold/saveNote.html" data-icon="plus" data-iconpos="top">Note</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week4/Gold/news.html" data-icon="star"  data-iconpos="left" class="secondaryColor">News</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week4/Bronze/index.html" data-icon="plus"  cdata-iconpos="left" class="secondaryColor">Bronze</a></li>
+				  </ul>
+			  </div>
+		 </div>
+	</div>
+		
 		
 	<!-- Friend Type Page Header-->
         <div data-role="page" id="friendtype" data-add-back-btn="true">
 
-        	<div data-role="header" class="secondaryColor">
+        	<div data-role="header" class="secondaryColor" data-postion="fixed">
             	<h1>Friend Type</h1>
         	</div>
         
@@ -225,25 +226,26 @@
         		</div>
     		</div>
     
-   	<!-- Priority Page Footer -->
-		<div data-role="footer">
-			<div data-role="navbar">
-				<ul>
+   	<!-- Friendtype Page Footer -->
+		<div data-role="footer" data-postion="fixed">
+			   <div data-role="navbar">
+				  <ul>
 					<li><a href="#home" data-icon="home" data-iconpos="left" class="secondaryColor">Home</a></li>
-					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/about.html" data-icon="info"  data-iconpos="left" class="secondaryColor">About</a></li>
-				    <li><a href="#savenote" data-icon="plus" data-iconpos="top">Note</a></li>
-					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/news.html" data-icon="star"  data-iconpos="left" class="secondaryColor">News</a></li>
-					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Bronze/index.html" data-icon="plus"  cdata-iconpos="left" class="secondaryColor">Bronze</a></li>
-				</ul>
-			</div>
-		</div>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week4/Gold/about.html" data-icon="info"  data-iconpos="left" class="secondaryColor">About</a></li>
+				    <li><a href="/Users/desiregardner/Desktop/MIU/Week4/Gold/saveNote.html" data-icon="plus" data-iconpos="top">Note</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week4/Gold/news.html" data-icon="star"  data-iconpos="left" class="secondaryColor">News</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week4/Bronze/index.html" data-icon="plus"  cdata-iconpos="left" class="secondaryColor">Bronze</a></li>
+				  </ul>
+			  </div>
+		 </div>
 	</div>
+		
 	
 		 <!-- Priority Type Page Header-->
     	 <div data-role="page" id="prioritytype" data-add-back-btn="true">
         
         <!--Header-->
-        <div data-role="header" class="secondaryColor">
+        <div data-role="header" class="secondaryColor" data-postion="fixed">
             <h1>Priority Type</h1>
         </div>
         
@@ -265,27 +267,29 @@
                </ul>
            </div>
        </div>
-
-
-			<!-- Priority Page Footer -->
-		<div data-role="footer">
-			<div data-role="navbar">
-				 <ul>
+       
+       		<!-- Priority Page Footer -->
+			<div data-role="footer" data-postion="fixed">
+			   <div data-role="navbar">
+				  <ul>
 					<li><a href="#home" data-icon="home" data-iconpos="left" class="secondaryColor">Home</a></li>
-					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/about.html" data-icon="info"  data-iconpos="left" class="secondaryColor">About</a></li>
-				    <li><a href="#savenote" data-icon="plus" data-iconpos="top">Note</a></li>
-					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/news.html" data-icon="star"  data-iconpos="left" class="secondaryColor">News</a></li>
-					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Bronze/index.html" data-icon="plus"  cdata-iconpos="left" class="secondaryColor">Bronze</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>	
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week4/Gold/about.html" data-icon="info"  data-iconpos="left" class="secondaryColor">About</a></li>
+				    <li><a href="/Users/desiregardner/Desktop/MIU/Week4/Gold/saveNote.html" data-icon="plus" data-iconpos="top">Note</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week4/Gold/news.html" data-icon="star"  data-iconpos="left" class="secondaryColor">News</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week4/Bronze/index.html" data-icon="plus"  cdata-iconpos="left" class="secondaryColor">Bronze</a></li>
+				  </ul>
+			  </div>
+		 </div>
+	</div>
+		
+
+
 	
 	 <!-- Note Page Header-->
     	<div data-role="page" id="notetype" data-add-back-btn="true">
     
 	<!--Note Type Header-->
-        <div data-role="header"  class="secondaryColor">
+        <div data-role="header"  class="secondaryColor" data-postion="fixed">
             <h1>Note Type</h1>
         </div>
         
@@ -294,19 +298,18 @@
             <div data-role="content">
             	 <ul data-role="listview" data-filter="true" data-theme="a">
                      <li>
-                        <a href="underCon.html" class="has-icon" data-ajax="false">
+                        <a href="recent.html" class="has-icon">
                         <img src="images/Recent.png" class="ui-li-icon"/>
                         <h3>Recent</h3>
-                        <span class="ui-li-count">20</span>
-
-                       </a>
+                        <span class="ui-li-count">4</span>
+						</a>
                     </li>
                     
                     <li>
                        <a href="underCon.html" class="has-icon" data-ajax="false">
                         <img src="images/Favorites.png" class="ui-li-icon"/>
                         <h3>Favorites</h3>
-                        <span class="ui-li-count">10</span>
+                        <span class="ui-li-count">5</span>
 					   </a>
                     </li>
                 	
@@ -314,7 +317,7 @@
                         <a href="underCon.html" class="has-icon" data-ajax="false">
                         <img src="images/Shared.png" class="ui-li-icon"/>
                         <h3>Shared</h3>
-                        <span class="ui-li-count">8</span>
+                        <span class="ui-li-count">3</span>
 					    </a>
                     </li>
                 
@@ -322,146 +325,32 @@
                         <a href="underCon.html" class="has-icon" data-ajax="false">
                         <img src="images/Trash.png" class="ui-li-icon"/>
                         <h3>Trash</h3>
-                        <span class="ui-li-count">12</span>
+                        <span class="ui-li-count">10</span>
 					    </a>
                      </li>
                  </ul>
 			</div>
         </div>
 
-	<!-- Priority Page Footer -->
-			<div data-role="footer">
+	<!-- Note Type Page Footer -->
+			<div data-role="footer" data-postion="fixed">
 			   <div data-role="navbar">
 				  <ul>
 					<li><a href="#home" data-icon="home" data-iconpos="left" class="secondaryColor">Home</a></li>
-					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/about.html" data-icon="info"  data-iconpos="left" class="secondaryColor">About</a></li>
-				    <li><a href="#savenote" data-icon="plus" data-iconpos="top">Note</a></li>
-					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/news.html" data-icon="star"  data-iconpos="left" class="secondaryColor">News</a></li>
-					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Bronze/index.html" data-icon="plus"  cdata-iconpos="left" class="secondaryColor">Bronze</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week4/Gold/about.html" data-icon="info"  data-iconpos="left" class="secondaryColor">About</a></li>
+				    <li><a href="/Users/desiregardner/Desktop/MIU/Week4/Gold/saveNote.html" data-icon="plus" data-iconpos="top">Note</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week4/Gold/news.html" data-icon="star"  data-iconpos="left" class="secondaryColor">News</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week4/Bronze/index.html" data-icon="plus"  cdata-iconpos="left" class="secondaryColor">Bronze</a></li>
 				  </ul>
 			  </div>
 		 </div>
 	</div>
 		
-	
-<!--Start of Additem Page-->
-        <!-- Save Note Page Header -->
-    	<div data-role="page" id="savenote" data-add-back-btn="true">
-
-        <div data-role="header" data-postion="fixed" class="secondaryColor">
-            <h1>Save Note</h1>
-        </div>
-
-        
-        <!-- Save Note Page Content -->
-        
-        <div data-role="content" data-theme="a">
-        
-        	<form action="" method="post" id="savenoteform">
-        	<p>*Fields are Required</p>
-        	
-        	<div data-role="fieldcontain">
-				<label for="Choose A Friend" class="select" >*Choose A Friend:</label>
-				<select name="Choose A Friend" id="select-choice-1" data-mini="true">
-                	<option value="boy">Boyfriend</option>
-   					<option value="girl">Girlfriend</option>
-  					<option value="par">Parent</option>
-  					<option value="fri">Friend</option>
-  					<option value="fi">Fiance</option>
-  					<option value="sib">Sibling</option>
-  					<option value="oth">Other</option>
-				</select>
-			</div>
-
-			<div data-role="fieldcontain">
-    			<fieldset data-role="controlgroup">
-	   			<legend>*Did you select the right friend?</legend>
-	   				<input type="checkbox" name="checkbox-1" id="checkbox-1" class="custom" checked="checked"/>
-	   				<label for="checkbox-1">Yes</label>
-    			</fieldset>
-			</div>
-
-			<div>
-	        		<label for="note">*Note:</label>
-					<textarea name="friendnote" id="textarea" placeholder="Your note goes here" class="required"></textarea>
-	        </div>
-
-
-			<fieldset data-role="controlgroup">
-				<legend>*How importance is this?</legend>
-     			<input type="radio" name="radio-choice-1" id="radio-choice-1" value="choice-1" checked="checked" />
-     			<label for="radio-choice-1">Really Important!</label>
-
-     			<input type="radio" name="radio-choice-1" id="radio-choice-2" value="choice-2"  />
-     			<label for="radio-choice-2">I can take a guess.</label>
-			</fieldset>
-
-			<!--Could not get flip switch to work/still testing/On/off-->
-			<div data-role="fieldcontain">
-				<label for="flip-c">*Turn Reminder:</label>
-				<select name="slider" id="flip-c" data-role="slider" data-theme="a" class="ui-slider-switch">
-				<option value="off">Off</option>
-				<option value="on">On</option>
-				</select> 
-			</div>
-
-
-		 	<div data-role="fieldcontain">		
-						<label for="reminder">*Number of times:</label>
-						<input type="range" name="reminder" id="reminder" value="0" min="1" max="10" />
-					</div>	
-
-				<div data-role="fieldcontain">
-					<label for="date">*On This Day:</label>
-					<input type="text" name="remindme" id="date" placeholder="MM/DD/YY" class="required date" />
-				</div>
-
-
-	    	<div>   	
-	    		<input type="reset" value="Clear" />
-	        	<input type="submit" value="Save Note" data-theme="a" />
-        	</form>
-        </div> 
-     <!-- End of Note Form -->
-     
-     <!-- Save Type Footer -->
-		<div data-role="footer">
-			<div data-role="navbar">
-				<ul>
-					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/index.html" data-icon="home" class="secondaryColor">Home</a></li>
-					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/about.html" data-icon="info"  data-iconpos="left" class="secondaryColor">About</a></li>
-				    <li><a href="#savenote" data-icon="plus" data-iconpos="top" >Note</a></li>
-					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Gold/news.html" data-icon="star"  data-iconpos="left" class="secondaryColor">News</a></li>
-					<li><a href="/Users/desiregardner/Desktop/MIU/Week3/Bronze/index.html" data-icon="plus"  class="secondaryColor">Bronze</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-
-    	
-	<!-- Start of Construction Page -->
-	<div data-role="page" id="underCon.html" data-add-back-btn="true">
-
-		<!-- Header -->
-		<div data-role="header" >
-			<h1>Under Construction</h1>
-		</div>
-
-		<!--  Construction Content -->
-		<div data-role="content">
-
-			<img src="images/eUnder.png" class="imgSize"/>
-
-		</div>
-		
-		
         <!-- Jquery Themes -->
         <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 
 
-
-
-       <!-- JavaScript under here -->
+		<!-- JavaScript under here -->
 		<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 	    <script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
 	    <script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>

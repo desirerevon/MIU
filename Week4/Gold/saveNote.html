@@ -1,0 +1,115 @@
+<!Doctype html>
+<!--Desire Revon-->
+<!--MIU: Project 4-->
+<!--Term:1206-->
+<!--I Remember Mobile Application--> 
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+
+	<title>I Remember</title>
+
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Mobile IE needs ClearType for smoothing fonts -->
+	<meta http-equiv="cleartype" content="on">
+
+	<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
+	<link rel="stylesheet" href="CSS/style.css" />
+
+
+	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+
+</head>
+<body> 
+ 
+<!-- Save Note Page Header -->
+    	<div data-role="page" id="savenote" data-add-back-btn="true">
+
+        <div data-role="header" data-postion="fixed" class="secondaryColor">
+            <h1>Save Note</h1>
+        </div>
+
+ 
+ <!-- Save Note Page Content -->
+        
+        <div data-role="content" data-theme="a">
+        
+        	<form action="" method="post" id="savenoteform">
+        	<strong><p>Ready to save a note? Fill out the form and hit the Save Note button below. To find your note hit the Go To Note button.</p></strong>
+        	<p>Field with ( * ) are required.</p>
+        	
+        	<div data-role="fieldcontain">
+				<label for="Choose A Friend" class="select">*Choose A Friend:</label>
+				<select name="Choose A Friend" id="select-choice-1" data-mini="true">
+                	<option value="boy">Boyfriend</option>
+   					<option value="girl">Girlfriend</option>
+  					<option value="par">Parent</option>
+  					<option value="fri">Friend</option>
+  					<option value="fi">Fiance</option>
+  					<option value="sib">Sibling</option>
+  					<option value="oth">Other</option>
+				</select>
+			</div>
+
+			<div data-role="fieldcontain">
+    			<fieldset data-role="controlgroup">
+	   			<legend>*Did you select the right friend?</legend>
+	   				<input type="checkbox" name="checkbox-1" id="checkbox-1" class="custom" checked="checked"/>
+	   				<label for="checkbox-1">Yes</label>
+    			</fieldset>
+			</div>
+
+			<div>
+	        		<label for="note">*Note:</label>
+					<textarea name="friendnote" id="textarea" placeholder="Your note goes here" class="required"></textarea>
+	        </div>
+
+
+			<fieldset data-role="controlgroup">
+				<legend>*How importance is this?</legend>
+     			<input type="radio" name="radio-choice-1" id="radio-choice-1" value="choice-1" checked="checked" />
+     			<label for="radio-choice-1">Really Important!</label>
+
+     			<input type="radio" name="radio-choice-1" id="radio-choice-2" value="choice-2"  />
+     			<label for="radio-choice-2">I can take a guess.</label>
+			</fieldset>
+
+		 	<div data-role="fieldcontain">		
+						<label for="reminder">*Number of times:</label>
+						<input type="range" name="reminder" id="reminder" value="0" min="1" max="10" />
+					</div>	
+
+				<div data-role="fieldcontain">
+					<label for="date">*On This Day:</label>
+					<input type="text" name="remindme" id="date" placeholder="MM/DD/YY" class="required date" />
+				</div>
+
+
+	    	<div>   	
+	    		<input type="reset" value="Clear" />
+	        	<input type="submit" value="Save Note" data-theme="a" />
+	        	<a href="recent.html" data-role="button" id="myNote">My Note</a>
+			</div> 
+    </div>
+
+    <!-- End of Note Form -->
+
+         	<!-- Note Type Page Footer -->
+			<div data-role="footer" data-postion="fixed">
+			   <div data-role="navbar">
+				  <ul>
+					<li><a href="#home" data-icon="home" data-iconpos="left" class="secondaryColor">Home</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week4/Gold/about.html" data-icon="info"  data-iconpos="left" class="secondaryColor">About</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week4/Gold/news.html" data-icon="star"  data-iconpos="left" class="secondaryColor">News</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week4/Bronze/index.html" data-icon="plus"  cdata-iconpos="left" class="secondaryColor">Bronze</a></li>
+				  </ul>
+			  </div>
+		 </div>
+	</div>
