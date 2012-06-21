@@ -1,0 +1,99 @@
+<!Doctype html>
+<!--Desire Revon-->
+<!--MIU: Project 4-->
+<!--Term:1206-->
+<!--I Remember Mobile Application--> 
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+
+	<title>I Remember</title>
+
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Mobile IE needs ClearType for smoothing fonts -->
+	<meta http-equiv="cleartype" content="on">
+
+	<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
+	<link rel="stylesheet" href="CSS/style.css" />
+
+
+	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+</head>
+<body>
+
+<!-- Start of Disclosure Page -->
+	<div data-role="page" id="disclose" data-add-back-btn="true">
+
+		<!-- Header -->
+		<div data-role="header" class="secondaryColor">
+			<h1>Disclosure</h1>
+		</div>
+
+		<!--  About Content -->
+		<div data-role="content">
+	
+            </div>
+            
+            <div data-role="content" data-theme="e">
+        
+        	<form action="" method="post" id="discloseform">
+        	<strong><p>Give Us Feedback</p></strong>
+        	<p>This survey is optional. Thanks for stopping by!</p>
+
+
+        	
+        	<div data-role="fieldcontain">
+				<label for="App" class="select" >Rate Our App:</label>
+				<select name="rateApp" id="select-choice-1" data-mini="true">
+                	<option value="0">Awesome</option>
+   					<option value="1">Great</option>
+  					<option value="2">It's Ooookay</option>
+  					<option value="3">You May Need Help</option>
+  					<option value="4">Have you heard of Evernote?</option>
+				</select>
+			</div>
+
+			<div data-role="fieldcontain">
+    			<fieldset data-role="controlgroup">
+	   			<legend>Would you give it a try?</legend>
+	   				<input type="checkbox" name="checkbox-1" id="checkbox-1" class="custom" checked="checked"/>
+	   				<label for="checkbox-1">Yes</label>
+	   				<input type="checkbox" name="checkbox-2" id="checkbox-2" class="custom"/>
+	   				<label for="checkbox-2">No</label>
+    			</fieldset>
+			</div>
+
+			<div>
+	        		<label for="note">Suggestions:</label>
+					<textarea name="suggest" id="textarea" placeholder="Type Your Suggestion" class="required"></textarea>
+	        </div>
+
+	    		<input type="reset" value="Clear" />
+	        	<input type="submit" value="Submit" data-theme="a" />
+        	</form>
+        </div> 
+    </div>
+     <!-- End of Note Form -->
+
+		<!-- Footer -->
+				<div data-role="footer">
+			   <div data-role="navbar">
+				  <ul>
+					<li><a href="#home" data-icon="home" data-iconpos="left" class="secondaryColor">Home</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week4/Gold/about.html" data-icon="info"  data-iconpos="left" class="secondaryColor">About</a></li>
+				    <li><a href="#savenote" data-icon="plus" data-iconpos="top" data-theme="e">Note</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week4/Gold/news.html" data-icon="star"  data-iconpos="left" class="secondaryColor">News</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week4/Bronze/index.html" data-icon="plus"  cdata-iconpos="left" class="secondaryColor">Bronze</a></li>
+				  </ul>
+			  </div>
+		 </div>
+	</div>
+</body>
+</html>

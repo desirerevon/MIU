@@ -5,12 +5,8 @@
 <!-- I Remember --> 
 */
 
-mainColor {
-	background-image: -webkit-linear-gradient(bottom, rgb(0,128,136), rgb(0,148,156), rgb(0,168,176));
-}
-
 .secondaryColor {
-	background-image: -webkit-linear-gradient(bottom, rgb(147,84,22), rgb(199,136,74), rgb(250,187,25));
+	background-image: -webkit-linear-gradient(bottom, rgb(89,96,168), rgb(89,96,168), rgb(89,96,168));
 }
 
 .imgSize {
@@ -25,7 +21,65 @@ label.error{display:block; margin:1px 0; color:#cc0000;}
 
 #rgerrorslink{display:none;}
 
+#signin{
+background-image:url('../images/deep.png');
+background-repeat:no-repeat;
+}
 
+#brand{
+width: 10%;
+float: left;
+}
+
+#tabContaier ul{
+overflow:hidden; /*Clearing float. */
+      border-right:1px solid #fff;
+      height:35px;
+      position:absolute; /*Takings tabs to higher layer */
+z-index:100;
+ }
+ #tabContaier li{
+      float:left;
+      list-style:none;
+ }
+ #tabContaier li a{
+      background:#ddd;
+      border:1px solid #fcfcfc;
+      border-right:0;
+      color:#666;
+      cursor:pointer;
+      display:block;
+      height:35px;
+      line-height:35px;
+      padding:0 30px;
+      text-decoration:none;
+      text-transform:uppercase;
+ }
+ #tabContaier li a:hover{
+      background:#eee;
+ }
+ #tabContaier li a.active{
+      background:#fbfbfb;
+      border:1px solid #fff;
+      border-right:0;
+      color:#333;
+ }
+ 
+ .tabDetails{
+      background:#fbfbfb;
+      border:1px solid #fff;
+      margin:34px 0 0; /*1px less then actual tab height to fix the border gap between active tab &amp; tab detail section. */
+}
+ .tabContents{
+      padding:20px
+ }
+ .tabContents h1{
+      font:normal 24px/1.1em Georgia, "Times New Roman", Times, serif;
+      padding:0 0 10px;
+ }
+ .tabContents p{
+ padding:0 0 10px;
+ }
 
 
 /*

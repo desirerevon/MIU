@@ -1,6 +1,6 @@
 <!Doctype html>
 <!--Desire Revon-->
-<!--MIU: Project 4-->
+<!--MIU: Project 3-->
 <!--Term:1206-->
 <!--I Remember Mobile Application--> 
 <html lang="en">
@@ -25,6 +25,8 @@
 
 	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
 	<script src="js/libs/modernizr.custom.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+
 </head>
 <body>
 
@@ -32,7 +34,7 @@
    
     <div data-role="page" id="signin">
 
-        <div data-role="header" class="secondaryColor" data-postion="fixed">
+        <div data-role="header" class="secondaryColor">
             <h1>I Remember</h1>
         </div>
         
@@ -41,28 +43,29 @@
         <!-- Sign In Page Feature -->
         
         <div style="text-align:center">
-             <a href="#home" data-ajax="false"><img src="images/main.png"/></a>
+             <a href="#home" data-ajax="false"><img src="images/remLogo.png"/></a>
         </div>
+        
         
         <!-- Sign In Page Content -->
         
-        <div data-role="content" id="siginform">
-           <p>Field with ( * ) are required.</p>
+        <div data-role="content" id="signform">
+        	<p>Field with ( * ) are required.</p>
             
         <!-- Email Field for Login -->
             <div data-role="fieldcontain">
                 <form action="" method="post" id="username">
                     <label for="username"><span class="asterisk">* </span>Username:</label>
-                    <input type="text" placeholder="Username" name="username" id="username" class="required username">
+                    <input type="text" placeholder="Username" name="username" id="username" class="Required">
                 </form>
             </div>
             
          <!-- Password Field for Login --> 
           
             <div data-role="fieldcontain">
-                <form action="" method="post" id="password">
-                    <label for="password"><span class="asterisk">* </span>Password:</label>
-                    <input type="text" placeholder="Password" name="password" id="password" class="required ">
+                <form action="" method="post" id="pword">
+                    <label for="pword"><span class="asterisk">* </span>Password:</label>
+                    <input type="text" placeholder="Password" name="pword" id="pword" class="Required ">
                 </form>
             </div>
         
@@ -71,13 +74,13 @@
         
         <!-- Submit Buttons for Login -->
         
-        <div data-role="fieldcontain" data-theme="a">
+        <div data-role="fieldcontain" data-theme="e">
             <div>
-				<input type="submit" value="Sign In" />            
-			</div>
+            	<a href="#home" data-role="button" id="signin" >Sign In</a>
+            </div>
             
             <div>
-                <a href="#profile" data-role="button" id="signup" data-theme="e" class="secondaryColor">Sign Up</a>
+                <a href="#profile" data-role="button" id="signup" class="secondaryColor">Sign Up</a>
             </div>
             
             </form>
@@ -89,20 +92,20 @@
      <!-- User Profile Page Header -->
      <div data-role="page" id="profile" data-add-back-btn="true">
 
-        <div data-role="header" class="secondaryColor" data-add-back-btn="true" data-postion="fixed">
+        <div data-role="header" data-postion="fixed" class="secondaryColor">
             <h1>Sign Up</h1>
         </div>
 
         <!-- User Profile Page Feature -->
         <div style="text-align:center">
-             <a href="" data-ajax="false"></a>
+             <a href="" data-ajax="false"><img src=""/></a>
         </div>
 
         <!-- User Profile Information Page -->
         <div data-role="content">
 	        <form action="" method="post" id="profile"
 			        <div data-role="fieldcontain">
-			            <p>Field with ( * ) are required.</p>
+			            <p>*Fields are Required</p>
 			            <label for="userName"><span class="asterisk">* </span>User Name</label>
 			            <input type="text" name="userName" id="userName" value="" class="required" />
 			            <label for="email"><span class="asterisk">* </span>Email:</label>
@@ -115,7 +118,7 @@
 			            <input type="text" name="password" id="passwordCon" value="" class="required"/>
 			        </div>
 				        <div>
-						  	<a href="underCon.html" data-role="button" id="save" data-theme="a" class="secondaryColor">Create Account</a>
+						  	<a href="underCon.html" data-role="button" id="save" data-theme="e" class="secondaryColor">Create Account</a>
 			            </div>
 			     </div>
 		    </form>
@@ -128,18 +131,18 @@
 		<div data-role="page" id="home"> 
 
 		<!-- Home Page Header -->
-		<div data-role="header" class="secondaryColor" data-postion="fixed">
+		<div data-role="header" class="secondaryColor"><img id="brand"  src="images/brand.png" >
 			<h1>I Remember</h1>
 		</div>
-		
+
 		<!-- Feature -->
 		<div>
 				<a href="#signin" rel="external"><img class="imgSize" src="images/Feature.png" /></a>
 		</div>
-		
+
 		<!-- Home Content -->
 		<div data-role="content">
-            <ul data-role="listview" data-filter="true" data-theme="a">
+            <ul data-role="listview" data-filter="true" data-theme="e">
                 <li>
                     <a href="#friendtype" class="has-icon" data-ajax="false">
                         <img src="images/Friend Type.png" class="ui-li-icon"/>
@@ -160,26 +163,25 @@
                 </li>
             </ul>
 		</div>
-		
+
 		<!-- Home Page Footer -->
-			<div data-role="footer" data-postion="fixed">
+			<div data-role="footer">
 			   <div data-role="navbar">
 				  <ul>
-					<li><a href="#home" data-icon="home" data-iconpos="left" class="secondaryColor">Home</a></li>
+					<li><a href="#signin" data-icon="check" data-iconpos="left" class="secondaryColor">LogIn</a></li>
 					<li><a href="/Users/desiregardner/Desktop/MIU/Week4/Gold/about.html" data-icon="info"  data-iconpos="left" class="secondaryColor">About</a></li>
-				    <li><a href="/Users/desiregardner/Desktop/MIU/Week4/Gold/saveNote.html" data-icon="plus" data-iconpos="top">Note</a></li>
+				    <li><a href="#savenote" data-icon="plus" data-iconpos="top" data-theme="e">Note</a></li>
 					<li><a href="/Users/desiregardner/Desktop/MIU/Week4/Gold/news.html" data-icon="star"  data-iconpos="left" class="secondaryColor">News</a></li>
 					<li><a href="/Users/desiregardner/Desktop/MIU/Week4/Bronze/index.html" data-icon="plus"  cdata-iconpos="left" class="secondaryColor">Bronze</a></li>
 				  </ul>
 			  </div>
 		 </div>
 	</div>
-		
-		
+
 	<!-- Friend Type Page Header-->
         <div data-role="page" id="friendtype" data-add-back-btn="true">
 
-        	<div data-role="header" class="secondaryColor" data-postion="fixed">
+        	<div data-role="header" class="secondaryColor"><img id="brand"  src="images/brand.png" >
             	<h1>Friend Type</h1>
         	</div>
         
@@ -192,7 +194,7 @@
                     		<h3>Boyfriend</h3>
                     		<p>Jack favorite color is red</p>
                 		</div>
-						
+
 						<div data-role="collapsible" data-collapsed="true">
                    	 		<h3>Girlfriend</h3>
                     		<p>Pick up new shoes at shoe depot</p>
@@ -226,26 +228,25 @@
         		</div>
     		</div>
     
-   	<!-- Friendtype Page Footer -->
-		<div data-role="footer" data-postion="fixed">
+   	<!-- Priority Page Footer -->
+			<div data-role="footer">
 			   <div data-role="navbar">
 				  <ul>
 					<li><a href="#home" data-icon="home" data-iconpos="left" class="secondaryColor">Home</a></li>
 					<li><a href="/Users/desiregardner/Desktop/MIU/Week4/Gold/about.html" data-icon="info"  data-iconpos="left" class="secondaryColor">About</a></li>
-				    <li><a href="/Users/desiregardner/Desktop/MIU/Week4/Gold/saveNote.html" data-icon="plus" data-iconpos="top">Note</a></li>
+				    <li><a href="#savenote" data-icon="plus" data-iconpos="top" data-theme="e">Note</a></li>
 					<li><a href="/Users/desiregardner/Desktop/MIU/Week4/Gold/news.html" data-icon="star"  data-iconpos="left" class="secondaryColor">News</a></li>
 					<li><a href="/Users/desiregardner/Desktop/MIU/Week4/Bronze/index.html" data-icon="plus"  cdata-iconpos="left" class="secondaryColor">Bronze</a></li>
 				  </ul>
 			  </div>
 		 </div>
 	</div>
-		
-	
+
 		 <!-- Priority Type Page Header-->
     	 <div data-role="page" id="prioritytype" data-add-back-btn="true">
         
         <!--Header-->
-        <div data-role="header" class="secondaryColor" data-postion="fixed">
+        <div data-role="header" class="secondaryColor"><img id="brand"  src="images/brand.png" >
             <h1>Priority Type</h1>
         </div>
         
@@ -258,7 +259,7 @@
                     	 <p>David</p>
                          <p>Ring size is 9</p>
                 	</div>
-					
+
 					<div data-role="collapsible" data-collapsed="true">
                          <h3>Minor</h3>
                          <p>Sibling</p>
@@ -267,49 +268,47 @@
                </ul>
            </div>
        </div>
-       
-       		<!-- Priority Page Footer -->
-			<div data-role="footer" data-postion="fixed">
+
+			   <!-- Priority Page Footer -->
+			   <div data-role="footer">
 			   <div data-role="navbar">
 				  <ul>
 					<li><a href="#home" data-icon="home" data-iconpos="left" class="secondaryColor">Home</a></li>
 					<li><a href="/Users/desiregardner/Desktop/MIU/Week4/Gold/about.html" data-icon="info"  data-iconpos="left" class="secondaryColor">About</a></li>
-				    <li><a href="/Users/desiregardner/Desktop/MIU/Week4/Gold/saveNote.html" data-icon="plus" data-iconpos="top">Note</a></li>
+				    <li><a href="#savenote" data-icon="plus" data-iconpos="top" data-theme="e">Note</a></li>
 					<li><a href="/Users/desiregardner/Desktop/MIU/Week4/Gold/news.html" data-icon="star"  data-iconpos="left" class="secondaryColor">News</a></li>
 					<li><a href="/Users/desiregardner/Desktop/MIU/Week4/Bronze/index.html" data-icon="plus"  cdata-iconpos="left" class="secondaryColor">Bronze</a></li>
 				  </ul>
 			  </div>
 		 </div>
 	</div>
-		
 
-
-	
 	 <!-- Note Page Header-->
     	<div data-role="page" id="notetype" data-add-back-btn="true">
     
 	<!--Note Type Header-->
-        <div data-role="header"  class="secondaryColor" data-postion="fixed">
+        <div data-role="header"  class="secondaryColor"><img id="brand"  src="images/brand.png" >
             <h1>Note Type</h1>
         </div>
         
        <!-- Note Type Page Content -->
         <div data-role ="collapsible-set">
             <div data-role="content">
-            	 <ul data-role="listview" data-filter="true" data-theme="a">
+            	 <ul data-role="listview" data-filter="true" data-theme="e">
                      <li>
-                        <a href="recent.html" class="has-icon">
+                        <a href="recent.html" class="has-icon" data-ajax="false">
                         <img src="images/Recent.png" class="ui-li-icon"/>
                         <h3>Recent</h3>
-                        <span class="ui-li-count">4</span>
-						</a>
+                        <span class="ui-li-count">20</span>
+
+                       </a>
                     </li>
                     
                     <li>
                        <a href="underCon.html" class="has-icon" data-ajax="false">
                         <img src="images/Favorites.png" class="ui-li-icon"/>
                         <h3>Favorites</h3>
-                        <span class="ui-li-count">5</span>
+                        <span class="ui-li-count">10</span>
 					   </a>
                     </li>
                 	
@@ -317,7 +316,7 @@
                         <a href="underCon.html" class="has-icon" data-ajax="false">
                         <img src="images/Shared.png" class="ui-li-icon"/>
                         <h3>Shared</h3>
-                        <span class="ui-li-count">3</span>
+                        <span class="ui-li-count">8</span>
 					    </a>
                     </li>
                 
@@ -325,32 +324,117 @@
                         <a href="underCon.html" class="has-icon" data-ajax="false">
                         <img src="images/Trash.png" class="ui-li-icon"/>
                         <h3>Trash</h3>
-                        <span class="ui-li-count">10</span>
+                        <span class="ui-li-count">12</span>
 					    </a>
                      </li>
                  </ul>
 			</div>
         </div>
 
-	<!-- Note Type Page Footer -->
-			<div data-role="footer" data-postion="fixed">
+	<!-- Priority Page Footer -->
+			<div data-role="footer">
 			   <div data-role="navbar">
 				  <ul>
 					<li><a href="#home" data-icon="home" data-iconpos="left" class="secondaryColor">Home</a></li>
 					<li><a href="/Users/desiregardner/Desktop/MIU/Week4/Gold/about.html" data-icon="info"  data-iconpos="left" class="secondaryColor">About</a></li>
-				    <li><a href="/Users/desiregardner/Desktop/MIU/Week4/Gold/saveNote.html" data-icon="plus" data-iconpos="top">Note</a></li>
+				    <li><a href="#savenote" data-icon="plus" data-iconpos="top" data-theme="e">Note</a></li>
 					<li><a href="/Users/desiregardner/Desktop/MIU/Week4/Gold/news.html" data-icon="star"  data-iconpos="left" class="secondaryColor">News</a></li>
 					<li><a href="/Users/desiregardner/Desktop/MIU/Week4/Bronze/index.html" data-icon="plus"  cdata-iconpos="left" class="secondaryColor">Bronze</a></li>
 				  </ul>
 			  </div>
 		 </div>
 	</div>
-		
-        <!-- Jquery Themes -->
-        <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+</div>
 
 
-		<!-- JavaScript under here -->
+<!--Start of Additem Page-->
+        <!-- Save Note Page Header -->
+    	<div data-role="page" id="savenote" data-add-back-btn="true">
+
+        <div data-role="header" class="secondaryColor">
+            <h1>Save Note</h1>
+        </div>
+
+        
+        <!-- Save Note Page Content -->
+        
+        <div data-role="content" data-theme="e">
+        
+        	<form action="" method="post" id="savenoteform">
+        	<strong><p>Ready to save a note? Fill out the form and hit the Save Note button below. To find your note hit the Go To Note button.</p></strong>
+        	<p>Field with ( * ) are required.</p>
+
+
+        	
+        	<div data-role="fieldcontain">
+				<label for="Choose A Friend" class="select" >Choose A Friend:</label>
+				<select name="Choose A Friend" id="select-choice-1" data-mini="true">
+                	<option value="boy">Boyfriend</option>
+   					<option value="girl">Girlfriend</option>
+  					<option value="par">Parent</option>
+  					<option value="fri">Friend</option>
+  					<option value="fi">Fiance</option>
+  					<option value="sib">Sibling</option>
+  					<option value="oth">Other</option>
+				</select>
+			</div>
+
+			<div data-role="fieldcontain">
+    			<fieldset data-role="controlgroup">
+	   			<legend>Did you select the right friend?</legend>
+	   				<input type="checkbox" name="checkbox-1" id="checkbox-1" class="custom" checked="checked"/>
+	   				<label for="checkbox-1">Yes</label>
+    			</fieldset>
+			</div>
+
+			<div>
+	        		<label for="note">Note:</label>
+					<textarea name="friendnote" id="textarea" placeholder="Your note goes here" class="required"></textarea>
+	        </div>
+
+
+			<fieldset data-role="controlgroup">
+				<legend>How importance is this?</legend>
+     			<input type="radio" name="radio-choice-1" id="radio-choice-1" value="choice-1" checked="checked" />
+     			<label for="radio-choice-1">Really Important!</label>
+
+     			<input type="radio" name="radio-choice-1" id="radio-choice-2" value="choice-2"  />
+     			<label for="radio-choice-2">I can take a guess.</label>
+			</fieldset>
+
+		 	<div data-role="fieldcontain">		
+						<label for="reminder">Number of times:</label>
+						<input type="range" name="reminder" id="reminder" value="0" min="1" max="10" />
+					</div>	
+
+				<div data-role="fieldcontain">
+					<label for="date">On This Day:</label>
+					<input type="text" name="remindme" id="date" placeholder="MM/DD/YY" class="required date" />
+				</div>
+
+
+	    	<div>   	
+	    		<input type="reset" value="Clear" />
+	        	<input type="submit" value="Save Note" data-theme="a" />
+        	</form>
+        </div> 
+    </div>
+     <!-- End of Note Form -->
+     
+     <!-- Save Type Footer -->
+		<div data-role="footer">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week4/Gold/index.html" data-icon="home" class="secondaryColor">Home</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week4/Gold/about.html" data-icon="info"  data-iconpos="left" class="secondaryColor">About</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week4/Gold/news.html" data-icon="star"  data-iconpos="left" class="secondaryColor">News</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week4/Bronze/index.html" data-icon="plus"  class="secondaryColor">Bronze</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+       <!-- JavaScript under here -->
 		<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 	    <script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
 	    <script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
