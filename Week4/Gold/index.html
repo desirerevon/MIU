@@ -74,13 +74,13 @@
         
         <!-- Submit Buttons for Login -->
         
-        <div data-role="fieldcontain" data-theme="e">
+        <div data-role="fieldcontain" id="inup" data-theme="e">
             <div>
-            	<a href="#home" data-role="button" id="signin" >Sign In</a>
+            	<a href="#home" data-role="button" id="in" class="secondaryColor" >Sign In</a>
             </div>
             
             <div>
-                <a href="#profile" data-role="button" id="signup" class="secondaryColor">Sign Up</a>
+                <a href="#profile" data-role="button" id="up" class="secondaryColor">Sign Up</a>
             </div>
             
             </form>
@@ -98,7 +98,7 @@
 
         <!-- User Profile Page Feature -->
         <div style="text-align:center">
-             <a href="" data-ajax="false"><img src=""/></a>
+             <a href="" data-ajax="false"></a>
         </div>
 
         <!-- User Profile Information Page -->
@@ -131,7 +131,7 @@
 		<div data-role="page" id="home"> 
 
 		<!-- Home Page Header -->
-		<div data-role="header" class="secondaryColor"><img id="brand"  src="images/brand.png" >
+		<div data-role="header" class="secondaryColor"><img id="brand" src="images/brand.png">
 			<h1>I Remember</h1>
 		</div>
 
@@ -414,9 +414,15 @@
 				</div>
 
 
-	    	<div>   	
-	    		<input type="reset" value="Clear" />
-	        	<input type="submit" value="Save Note" data-theme="a" />
+	    		<input type="submit" value="Save Note" data-theme="e" />
+	        	<div class="ui-grid-a" style="text-align:center">
+                    <div class="ui-block-a">
+                        <a href="#" id="displayLink" data-role="button" data-mini="true" data-theme="" data-ajax="false">Display</a>
+                    </div>
+                    
+                    <div class="ui-block-b">
+                        <a href="#" id="clearLink" data-role="button" data-mini="true" data-theme="a">Clear</a>                   
+                    </div>
         	</form>
         </div> 
     </div>

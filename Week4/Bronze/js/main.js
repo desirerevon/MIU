@@ -1,9 +1,3 @@
-//Desire Revon
-//MIU:Project 3
-//Term:1206
-//I Remember Mobile Application
-
-//Wait until the DOM is ready.
 //Document Loads completely
 window.addEventListener("DOMContentLoaded", function() {
 

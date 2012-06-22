@@ -1,35 +1,30 @@
-// Desire Revon
-// MIU:Project 4
-// Term:1206
-// I Remember Mobile Application
-
-
  //JQUERY VALIDATION FORM
-	var parseSaveNote = function(data) {
-			//uses form data here;	
-			console.log(data);
+	
+		var parseSavenoteForm = function(data) {
+		//uses form data here;
+			//console.log(data);
 		};
 
-		ge(document).bind('pageinit', function(){
+		$(document).bind('pageinit',function(){
 
-			var sform = ge('#savenote');
+		var sform = $('#savenoteform');
 
-			jQuery.validator.messages.required = "Required";
+			//jQuery.validator.messages.required = "Required";
 			sform.validate({
 				invalidHandler: function(form, validator) {},
 				submitHandler: function() {
 					var data = sform.serializeArray();
-					parseSaveNote(data);
-				}
-			});
+					parseSavenoteForm(data);
+		}
+	});
 
-		});
+});
 
   	//Get Element By Id Function.
  	function ge(x){
          var theElement = document.getElementById(x);
          return theElement;
-     }
+     };
   
   	//Create select field element and populate with options.
      function makeField() {
@@ -55,7 +50,7 @@
                  importanceValue = radios[i].value;
              }
          }
-     };
+     }
   
   	//Get Selected CheckBox Value
 //  function getCheckboxValue() {
@@ -87,11 +82,10 @@
          }
      };
      
-      // Gather form data and place it in an Object, Object is an array for form label and value
      function storeData(key){
      	//If there is no key this is new item and needs a new key.
      			if(!key){
-         var id              = Math.floor(Math.random()*100000001);
+         					var id              = Math.floor(Math.random()*100000001);
          }else{
          //Set id to existing key that we are editing that will save over data
          //The key is the same key that has been passed along edit submit handler
@@ -114,24 +108,24 @@
           //Save data into local storage. Use stringify to convert object to a string(local storage only stores strings). 
           localStorage.setItem(id, JSON.stringify(item));
           alert("Note Saved!");
-     }
+     };
       
-      // Write Data from Local Storage to Browser 
+      // Create Storage 
      function getData() {
-     //Write Data from local storage to the browser.
          toggleControls("on");
          if(localStorage.length === 0){
              alert("There is no data in Local Storage so default data was added.");
              autoFillData();
          }
+         //Write Data Local-->Browser
          var makeDiv = document.createElement("div");
-        		makeDiv.setAttribute("id", "items");
+         makeDiv.setAttribute("id", "items");
          var makeList = document.createElement("ul");
-         	makeDiv.appendChild(makeList);
-         	document.body.appendChild(makeDiv);
+         makeDiv.appendChild(makeList);
+         document.body.appendChild(makeDiv);
          // Set 'items' display
          ge("items").style.display = "block";
-         for(var i = 0, len=localStorage.length; i < len; i++){
+         	 for(var i = 0, len=localStorage.length; i < len; i++){
              var makeli = document.createElement("li");
              var linksLi = document.createElement("li");
              makeList.appendChild(makeli);
@@ -150,7 +144,7 @@
              makeSubList.appendChild(linksLi); 
              }
              makeItemLinks(localStorage.key(i), linksLi); //Create edit and delete buttons/links for each item in local storage.
-         }
+         };
      }
       //Get the image for the right friend that's being displayed.
    // function getImage(imgName, makeSubList) {
@@ -283,7 +277,7 @@
  			window.location.reload();
  			return false;
  		}
- 	}
+ 	};
  	
  	    	function deleteItem(){
  		var ask = confirm("Would you like to delete this note?");
@@ -365,9 +359,8 @@
      var save = ge("save");
      save.addEventListener("click", validate);
      
-     var displayData = ge("display");
-     displayData.addEventListener("click", getData);
+     var displayLink = ge("displayLink");
+     displayLink.addEventListener("click", getData);
      
-     var clearLink = ge("clear");
+     var clearLink = ge("clearLink");
      clearLink.addEventListener("click", clearLocal);
- });
