@@ -66,15 +66,15 @@
          switch(n){
              case "on":
              	//ge("friendForm").style.display ="none";
-                 ge("clear").style.display = "inline";
-                 ge("display").style.display = "none";
-                 ge("addNew").style.display = "inline";
+                 ge("clearLink").style.display = "inline";
+                 ge("displayLink").style.display = "none";
+                 ge("save").style.display = "inline";
                  break;
              case "off":
              	//ge("friendForm").style.display ="block";
-                 ge('clear').style.display = "inline";
-                 ge("display").style.display = "inline";
-                 ge("addNew").style.display = "none";
+                 ge('clearLink').style.display = "inline";
+                 ge("displayLink").style.display = "inline";
+                 ge("save").style.display = "none";
                  ge("items").style.display = "none";
                  break;
              default:
