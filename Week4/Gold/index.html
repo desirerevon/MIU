@@ -368,8 +368,8 @@
 			
 					
 					<div data-role="fieldcontain">
-						<label for="friends" class="select" >Choose A Friend:</label>
-						<select name="Choose A Friend" id="select-choice-1" data-mini="true">
+						<label for="friend" class="select" >Choose A Friend:</label>
+						<select name="friend" id="friend" data-mini="true">
 							<option value="boy">Boyfriend</option>
 							<option value="girl">Girlfriend</option>
 							<option value="par">Parent</option>
@@ -390,7 +390,7 @@
 				
 						<div>
 							<label for="notes">Note:</label>
-							<textarea name="friendnote" id="notes" placeholder="Your note goes here" class="required"></textarea>
+							<textarea name="notes" id="notes" placeholder="Your note goes here" class="required"></textarea>
 						</div>
 			
 			
@@ -410,7 +410,7 @@
 			
 						<div data-role="fieldcontain">
 							<label for="date">On This Day:</label>
-							<input type="text" name="remindme" id="date" placeholder="MM/DD/YY" class="required date" />
+							<input type="text" name="date" id="date" placeholder="MM/DD/YY" class="required date" />
 						</div>
 			
 							<input type="submit" value="Save Note" data-theme="e" />
@@ -421,6 +421,8 @@
                     
                     <div class="ui-block-b">
                         <a href="#" id="clearLink" data-role="button" data-mini="true" data-theme="a" data-ajax="false">Clear</a>
+                        <a href="#" id="addNew" style="display:none;" data-ajax="false">Add New Note</a>
+
                     </div>
 	        	</div> 
 					</form>

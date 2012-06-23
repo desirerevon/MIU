@@ -69,13 +69,13 @@
              	 ge("savenoteform").style.display ="none";
                  ge("clearLink").style.display = "inline";
                  ge("displayLink").style.display = "none";
-                 //ge("save").style.display = "inline";//addNew
+                 ge("addNew").style.display = "inline";//addNew
                  break;
              case "off":
              	 ge("savenoteform").style.display ="block";
                  ge("clearLink").style.display = "inline";
                  ge("displayLink").style.display = "inline";
-                 //ge("save").style.display = "none";//addNew
+                 ge("addNew").style.display = "none";//addNew
                  ge("items").style.display = "none";
                  break;
              default:
@@ -98,7 +98,7 @@
          getSelectedRadio();
          //getCheckboxValue();
          var item          	    = {};
-         	 item.friend	  	= ["Friend:", ge("friend").value];
+         	 item.friend	  	= ["Friend:", ge("friends").value];
              //item.username 	= ["Username:", ge("username").value];
              //item.password 	= ["Password:", ge("password").value];
              item.importance 	= ["Importance:", importanceValue];
@@ -145,8 +145,8 @@
              makeSubList.appendChild(linksLi); 
              }
              makeItemLinks(localStorage.key(i), linksLi); //Create edit and delete buttons/links for each item in local storage.
-         };
-     }
+         }
+     };
       //Get the image for the right friend that's being displayed.
    // function getImage(imgName, makeSubList) {
 //  		var imageLi = document.createElement('li');
@@ -237,21 +237,20 @@
     		
     		//Show the form so we can edit item.
     		toggleControls("off");
-    		
     		//Populate form fields with the current localStorage values.
-    		ge("friends").value    = item.friend[1];
+    		ge('friends').value    = item.friend[1];
     		//ge("username").value = item.userName[1];
     		//ge("password").value = item.password[1];
     		//ge("confirm").value  = item.confirm[1];
     		var radios = document.forms[0].importance;
     		for(var i=0; i<radios.length; i++){
-    			if(radios[i].value == "Really Important" && item.importance[1] == "Really Important"){
+    			if(radios[i].value === "Really Important" && item.radio-choice-1[1] === "Really Important"){
     				radios[i].setAttribute("checked", "checked");
-    			}else if(radios[i].value == "I can't remember everything" && item.importance[1] == "I can't remember everything"){
+    			}else if(radios[i].value === "I can't remember everything" && item.radio-choice-2[1] === "I can't remember everything"){
     				radios[i].setAttribute("checked","checked");
     			}	
     		}
-    		if(item.favorite[1] == "Yes"){
+    		if(item.favorite[1] === "Yes"){
     			ge('fav').setAttribute("checked","checked");
     		}
     		ge('reminder').value = item.reminder[1];
