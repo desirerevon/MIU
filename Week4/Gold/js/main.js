@@ -5,7 +5,7 @@
 			//console.log(data);
 		};
 
-		$(document).bind('pageinit',function(){
+		$(document).bind('pageinit', function(){
 
 		var sform = $('#savenoteform');
 
