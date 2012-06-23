@@ -25,16 +25,17 @@
          var theElement = document.getElementById(x);
          return theElement;
      };
-  
+     
+     
   	//Create select field element and populate with options.
      function makeField() {
          var formTag = document.getElementsByTagName("form"),
-             selectLi = ge("select"),
-             makeSelect = document.createElement("select");
+             selectLi = ge('select'),
+             makeSelect = document.createElement('select');
              makeSelect.setAttribute("id", "friends");
           for(var i=0; i<friendType.length; i++){
-              var makeOption = document.createElement("option");
-              var optText = friendType[i];
+              var makeOption = document.createElement('option');
+              var optText = friendType[i]; //Saying this is not defined, causing error in local storage
               makeOption.setAttribute("value", optText);
               makeOption.innerHTML = optText;
               makeSelect.appendChild(makeOption);    
@@ -65,16 +66,16 @@
       function toggleControls(n) {
          switch(n){
              case "on":
-             	//ge("friendForm").style.display ="none";
+             	 ge("savenote").style.display ="none";
                  ge("clearLink").style.display = "inline";
                  ge("displayLink").style.display = "none";
-                 ge("save").style.display = "inline";
+                 ge("save").style.display = "inline";//addNew
                  break;
              case "off":
-             	//ge("friendForm").style.display ="block";
-                 ge('clearLink').style.display = "inline";
+             	 ge("friendForm").style.display ="block";
+                 ge("clearLink").style.display = "inline";
                  ge("displayLink").style.display = "inline";
-                 ge("save").style.display = "none";
+                 ge("save").style.display = "none";//addNew
                  ge("items").style.display = "none";
                  break;
              default:
@@ -96,15 +97,15 @@
          }
          getSelectedRadio();
          //getCheckboxValue();
-         var item          	= {};
-         	item.friend	  	= ["Friend:", ge("friends").value];
+         var item          	    = {};
+         	 item.friend	  	= ["Friend:", ge("friend").value];
              //item.username 	= ["Username:", ge("username").value];
              //item.password 	= ["Password:", ge("password").value];
-             item.importance = ["Importance:", importanceValue];
-             item.favorite   = ["Is right friend:", favoriteValue];
-             item.reminder	= ["Reminder:", ge("reminder").value];
-             item.date     	= ["Date:", ge("date").value];
-             item.notes       =  ["Note:", ge("notes").value];
+             item.importance 	= ["Importance:", importanceValue];
+             item.favorite   	= ["Is right friend:", favoriteValue];
+             item.reminder		= ["Reminder:", ge("reminder").value];
+             item.date     		= ["Date:", ge("date").value];
+             item.notes       	= ["Note:", ge("notes").value];
           //Save data into local storage. Use stringify to convert object to a string(local storage only stores strings). 
           localStorage.setItem(id, JSON.stringify(item));
           alert("Note Saved!");
@@ -253,9 +254,9 @@
     		if(item.favorite[1] == "Yes"){
     			ge('fav').setAttribute("checked","checked");
     		}
-    		ge("reminder").value = item.reminder[1];
-    		ge("date").value = item.date[1];
-    		ge("notes").value = item.notes[1];
+    		ge('reminder').value = item.reminder[1];
+    		ge('date').value = item.date[1];
+    		ge('notes').value = item.notes[1];
     		
     		//Remove the inital listener from the input "save note" button 
     		save.removeEventListener("click", storeData);
@@ -311,26 +312,26 @@
     			var friendError = "Please choose a friend";
     			getFriend.style.border = "1px solid red";
     			messageAry.push(friendError);
-    		}
+			}
     		
-    		//Username Validation
-  		// var re = /^[A-Za-z0-9_]{6,8}ge/;
-//     		//User name can inlcuded Capital letter, lowercase letters, numbers and an _ . 
-//     		 if(!re.exec(getUsername.value)){
-//     			var usernameError = "Please enter a valid username";
-//     			getUsername.style.border = "1px solid red"; 
-//     			messageAry.push(usernameError);
-//      		}
-     		
-    		//Password Validation
- 		// if(getPassword.value=== ""){
-//  			var passwordError = "Please enter your Password.";
-//  			getPassword.style.border = "1px solid red";
-//  			messageAry.push(passwordError);
-//  		}
-//    		
-     		//If there are errors display them on the screen
-     		//If there were errors, display them on the screen
+							//Username Validation
+						// var re = /^[A-Za-z0-9_]{6,8}ge/;
+				//     		//User name can inlcuded Capital letter, lowercase letters, numbers and an _ . 
+				//     		 if(!re.exec(getUsername.value)){
+				//     			var usernameError = "Please enter a valid username";
+				//     			getUsername.style.border = "1px solid red"; 
+				//     			messageAry.push(usernameError);
+				//      		}
+							
+							//Password Validation
+						// if(getPassword.value=== ""){
+				//  			var passwordError = "Please enter your Password.";
+				//  			getPassword.style.border = "1px solid red";
+				//  			messageAry.push(passwordError);
+				//  		}
+				//    		
+							//If there are errors display them on the screen
+							//If there were errors, display them on the screen
  		if(messageAry.length >= 1){
  			for(var i=0, j=messageAry.length; i < j; i++){
  				var txt = document.createElement('li');
@@ -343,24 +344,23 @@
     			//If all is ok save our data! Send the key value that came from edit data function
     			//Remember key value passed through editSubmit listener as a property
     			storeData(this.key);
-   		
-  		}
+			}
      		
      }
-     
-     //Variable Defaults
+            //Variable Defaults
      var friendType = ["--Choose Friend--", "Girlfriend", "Boyfriend", "Fiance", "Friend", "Sibling", "Parent", "Other"],
     		 importanceValue,
     		 favoriteValue = "No",
     	     errMsg = ge("errors");
      ;
      makeField();
-    
-     var save = ge("save");
-     save.addEventListener("click", validate);
+  
+  
+	var save = ge("save");
+    save.addEventListener("click", validate);
      
-     var displayLink = ge("displayLink");
-     displayLink.addEventListener("click", getData);
-     
-     var clearLink = ge("clearLink");
-     clearLink.addEventListener("click", clearLocal);
+	var displayLink = ge("displayLink");
+	displayLink.addEventListener("click", getData);
+	
+	var clearLink = ge("clearLink");
+	clearLink.addEventListener("click", clearLocal);

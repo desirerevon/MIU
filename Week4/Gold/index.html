@@ -362,70 +362,70 @@
         <div data-role="content" data-theme="e">
         
         	<form action="" method="post" id="savenoteform">
-        	<strong><p>Ready to save a note? Fill out the form and hit the Save Note button below. To find your note hit the Go To Note button.</p></strong>
-        	<p>Field with ( * ) are required.</p>
-
-
-        	
-        	<div data-role="fieldcontain">
-				<label for="Choose A Friend" class="select" >Choose A Friend:</label>
-				<select name="Choose A Friend" id="select-choice-1" data-mini="true">
-                	<option value="boy">Boyfriend</option>
-   					<option value="girl">Girlfriend</option>
-  					<option value="par">Parent</option>
-  					<option value="fri">Friend</option>
-  					<option value="fi">Fiance</option>
-  					<option value="sib">Sibling</option>
-  					<option value="oth">Other</option>
-				</select>
-			</div>
-
-			<div data-role="fieldcontain">
-    			<fieldset data-role="controlgroup">
-	   			<legend>Did you select the right friend?</legend>
-	   				<input type="checkbox" name="checkbox-1" id="checkbox-1" class="custom" checked="checked"/>
-	   				<label for="checkbox-1">Yes</label>
-    			</fieldset>
-			</div>
-
-			<div>
-	        		<label for="note">Note:</label>
-					<textarea name="friendnote" id="textarea" placeholder="Your note goes here" class="required"></textarea>
-	        </div>
-
-
-			<fieldset data-role="controlgroup">
-				<legend>How importance is this?</legend>
-     			<input type="radio" name="radio-choice-1" id="radio-choice-1" value="choice-1" checked="checked" />
-     			<label for="radio-choice-1">Really Important!</label>
-
-     			<input type="radio" name="radio-choice-1" id="radio-choice-2" value="choice-2"  />
-     			<label for="radio-choice-2">I can take a guess.</label>
-			</fieldset>
-
-		 	<div data-role="fieldcontain">		
-						<label for="reminder">Number of times:</label>
-						<input type="range" name="reminder" id="reminder" value="0" min="1" max="10" />
-					</div>	
-
-				<div data-role="fieldcontain">
-					<label for="date">On This Day:</label>
-					<input type="text" name="remindme" id="date" placeholder="MM/DD/YY" class="required date" />
-				</div>
-
-
-	        	<div class="ui-grid-a" style="text-align:center">
-                    <div class="ui-block-a">
-                     <a href="#" id="save" data-role="button" data-mini="true" data-theme="" data-ajax="false">Save</a>
-					 <a href="#" id="displayLink" data-role="button" data-mini="true" data-theme="" data-ajax="false">Display</a>
-                    </div>
+					<strong><p>Ready to save a note? Fill out the form and hit the Save Note button below.</p></strong>
+					<p>Field with ( * ) are required.</p>
+			
+			
+					
+					<div data-role="fieldcontain">
+						<label for="friends" class="select" >Choose A Friend:</label>
+						<select name="Choose A Friend" id="select-choice-1" data-mini="true">
+							<option value="boy">Boyfriend</option>
+							<option value="girl">Girlfriend</option>
+							<option value="par">Parent</option>
+							<option value="fri">Friend</option>
+							<option value="fi">Fiance</option>
+							<option value="sib">Sibling</option>
+							<option value="oth">Other</option>
+						</select>
+					</div>
+			
+						<div data-role="fieldcontain">
+							<fieldset data-role="controlgroup">
+							<legend>Did you select the right friend?</legend>
+								<input type="checkbox" name="checkbox-1" id="fav" class="custom" checked="checked"/>
+								<label for="fav">Yes</label>
+							</fieldset>
+						</div>
+				
+						<div>
+							<label for="notes">Note:</label>
+							<textarea name="friendnote" id="notes" placeholder="Your note goes here" class="required"></textarea>
+						</div>
+			
+			
+						<fieldset data-role="controlgroup">
+							<legend>How importance is this?</legend>
+							<input type="radio" name="radio-choice-1" id="radio-choice-1" value="choice-1" checked="checked" />
+							<label for="radio-choice-1">Really Important!</label>
+				
+							<input type="radio" name="radio-choice-1" id="radio-choice-2" value="choice-2"  />
+							<label for="radio-choice-2">I cant remember everything.</label>
+						</fieldset>
+			
+						<div data-role="fieldcontain">
+	        		<label for="reminder">*Remind Me This Many Times:</label>
+	        		<input type="range" name="reminder" id="reminder" placeholder="0" min="1" max="10"/>
+	        	</div>
+			
+						<div data-role="fieldcontain">
+							<label for="date">On This Day:</label>
+							<input type="text" name="remindme" id="date" placeholder="MM/DD/YY" class="required date" />
+						</div>
+			
+							<input type="submit" value="Save Note" data-theme="e" />
+	        				<div class="ui-grid-a" style="text-align:center">
+                    		<div class="ui-block-a">
+                     			<a href="#" id="displayLink" data-role="button" data-mini="true" data-theme="">Display</a>
+                   		    </div>
                     
                     <div class="ui-block-b">
-                        <a href="#" id="clearLink" data-role="button" data-mini="true" data-theme="a">Clear</a>                   
+                        <a href="#" id="clearLink" data-role="button" data-mini="true" data-theme="a">Clear</a>
                     </div>
-        	</form>
-        </div> 
-    </div>
+	        	</div> 
+					</form>
+       			 </div> 
+    		</div>
      <!-- End of Note Form -->
      
      <!-- Save Type Footer -->
