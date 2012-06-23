@@ -66,16 +66,16 @@
       function toggleControls(n) {
          switch(n){
              case "on":
-             	 ge("savenote").style.display ="none";
+             	 ge("savenoteform").style.display ="none";
                  ge("clearLink").style.display = "inline";
                  ge("displayLink").style.display = "none";
-                 ge("save").style.display = "inline";//addNew
+                 //ge("save").style.display = "inline";//addNew
                  break;
              case "off":
-             	 ge("friendForm").style.display ="block";
+             	 ge("savenoteform").style.display ="block";
                  ge("clearLink").style.display = "inline";
                  ge("displayLink").style.display = "inline";
-                 ge("save").style.display = "none";//addNew
+                 //ge("save").style.display = "none";//addNew
                  ge("items").style.display = "none";
                  break;
              default:
@@ -239,7 +239,7 @@
     		toggleControls("off");
     		
     		//Populate form fields with the current localStorage values.
-    		ge("friends").value  = item.friend[1];
+    		ge("friends").value    = item.friend[1];
     		//ge("username").value = item.userName[1];
     		//ge("password").value = item.password[1];
     		//ge("confirm").value  = item.confirm[1];

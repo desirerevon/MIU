@@ -1,7 +1,7 @@
 //Document Loads completely
 window.addEventListener("DOMContentLoaded", function() {
 
- 	//Get Element By Id Function.
+ //Get Element By Id Function.
  	function ge(x){
          var theElement = document.getElementById(x);
          return theElement;
@@ -53,7 +53,7 @@ window.addEventListener("DOMContentLoaded", function() {
                  ge("save").style.display = "inline";//addNew
                  break;
              case "off":
-             	 ge("friendForm").style.display ="block";
+             	 ge("savenote").style.display ="block";
                  ge("clearLink").style.display = "inline";
                  ge("displayLink").style.display = "inline";
                  ge("save").style.display = "none";//addNew
