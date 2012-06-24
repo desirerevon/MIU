@@ -98,7 +98,7 @@
          getSelectedRadio();
          //getCheckboxValue();
          var item          	    = {};
-         	 item.friend	  	= ["Friend:", ge("friends").value];
+         	 item.friend	  	= ["Choose A Friend:", ge("friends").value];
              //item.username 	= ["Username:", ge("username").value];
              //item.password 	= ["Password:", ge("password").value];
              item.importance 	= ["Importance:", importanceValue];
