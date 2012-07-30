@@ -5,6 +5,7 @@
 <!-- I Remember --> 
 */
 
+
 .secondaryColor {
 	background-image: -webkit-linear-gradient(bottom, rgb(89,96,168), rgb(89,96,168), rgb(89,96,168));
 }
@@ -21,13 +22,8 @@ label.error{display:block; margin:1px 0; color:#cc0000;}
 
 #rgerrorslink{display:none;}
 
-#signform{
-background-image:url('../images/deep.png');
-background-repeat:no-repeat;
-}
 
-
-#signin{
+#logo{
 background-image:url('../images/deep.png');
 background-repeat:no-repeat;
 }
@@ -37,16 +33,6 @@ background-image:url('../images/deep.png');
 background-repeat:no-repeat;
 }
 
-
-#inup{
-background-image:url('../images/deep.png');
-background-repeat:no-repeat;
-}
-
-#brand{
-width: 10%;
-float: left;
-}
 
 #tabContaier ul{
 overflow:hidden; /*Clearing float. */

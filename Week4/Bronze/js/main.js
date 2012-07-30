@@ -1,22 +1,22 @@
 //Document Loads completely
 window.addEventListener("DOMContentLoaded", function() {
 
- //Get Element By Id Function.
- 	function ge(x){
-         var theElement = document.getElementById(x);
+ //$t Element By Id Function.
+ 	function $(x){
+         var theElement = document.$tElementById(x);
          return theElement;
      };
      
      
   	//Create select field element and populate with options.
      function makeField() {
-         var formTag = document.getElementsByTagName("form"),
-             selectLi = ge('select'),
+         var formTag = document.$tElementsByTagName("form"),
+             selectLi = $('select'),
              makeSelect = document.createElement('select');
              makeSelect.setAttribute("id", "friends");
           for(var i=0; i<friendType.length; i++){
               var makeOption = document.createElement('option');
-              var optText = friendType[i]; //Saying this is not defined, causing error in local storage
+              var optText = friendType[i]; //Saying this is not defined, causing error in local stora$
               makeOption.setAttribute("value", optText);
               makeOption.innerHTML = optText;
               makeSelect.appendChild(makeOption);    
@@ -25,7 +25,7 @@ window.addEventListener("DOMContentLoaded", function() {
       };
   
   	//Find the value of selected radio button.
-     function getSelectedRadio() {
+     function $tSelectedRadio() {
          var radios = document.forms[0].importance;
          for(var i=0; i<radios.length; i++){
              if (radios[i].checked){
@@ -34,30 +34,30 @@ window.addEventListener("DOMContentLoaded", function() {
          }
      }
   
-  	//Get Selected CheckBox Value
-//  function getCheckboxValue() {
-//          if(ge("fav").checked){
-//            favoriteValue = ge("fav").value;
+  	//$t Selected CheckBox Value
+//  function $tCheckboxValue() {
+//          if($("fav").checked){
+//            favoriteValue = $("fav").value;
 //          } else {
 //              favoriteValue = "No";
 //          }
 //      }
      
-      //Turn on and off form by use of case during getData()
+      //Turn on and off form by use of case during $tData()
       function toggleControls(n) {
          switch(n){
              case "on":
-             	 ge("savenote").style.display ="none";
-                 ge("clearLink").style.display = "inline";
-                 ge("displayLink").style.display = "none";
-                 ge("save").style.display = "inline";//addNew
+             	 $("savenote").style.display ="none";
+                 $("clearLink").style.display = "inline";
+                 $("displayLink").style.display = "none";
+                 $("save").style.display = "inline";//addNew
                  break;
              case "off":
-             	 ge("savenote").style.display ="block";
-                 ge("clearLink").style.display = "inline";
-                 ge("displayLink").style.display = "inline";
-                 ge("save").style.display = "none";//addNew
-                 ge("items").style.display = "none";
+             	 $("savenote").style.display ="block";
+                 $("clearLink").style.display = "inline";
+                 $("displayLink").style.display = "inline";
+                 $("save").style.display = "none";//addNew
+                 $("items").style.display = "none";
                  break;
              default:
                  return false;
@@ -76,27 +76,27 @@ window.addEventListener("DOMContentLoaded", function() {
          //Object properties contain array with for label and input values.
          		id = key;
          }
-         getSelectedRadio();
-         //getCheckboxValue();
+         $tSelectedRadio();
+         //$tCheckboxValue();
          var item          	    = {};
-         	 item.friend	  	= ["Friend:", ge("friend").value];
-             //item.username 	= ["Username:", ge("username").value];
-             //item.password 	= ["Password:", ge("password").value];
+         	 item.friend	  	= ["Friend:", $("friend").value];
+             //item.username 	= ["Username:", $("username").value];
+             //item.password 	= ["Password:", $("password").value];
              item.importance 	= ["Importance:", importanceValue];
              item.favorite   	= ["Is right friend:", favoriteValue];
-             item.reminder		= ["Reminder:", ge("reminder").value];
-             item.date     		= ["Date:", ge("date").value];
-             item.notes       	= ["Note:", ge("notes").value];
-          //Save data into local storage. Use stringify to convert object to a string(local storage only stores strings). 
-          localStorage.setItem(id, JSON.stringify(item));
+             item.reminder		= ["Reminder:", $("reminder").value];
+             item.date     		= ["Date:", $("date").value];
+             item.notes       	= ["Note:", $("notes").value];
+          //Save data into local stora$. Use stringify to convert object to a string(local stora$ only stores strings). 
+          localStora$.setItem(id, JSON.stringify(item));
           alert("Note Saved!");
      };
       
-      // Create Storage 
-     function getData() {
+      // Create Stora$ 
+     function $tData() {
          toggleControls("on");
-         if(localStorage.length === 0){
-             alert("There is no data in Local Storage so default data was added.");
+         if(localStora$.length === 0){
+             alert("There is no data in Local Stora$ so default data was added.");
              autoFillData();
          }
          //Write Data Local-->Browser
@@ -106,18 +106,18 @@ window.addEventListener("DOMContentLoaded", function() {
          makeDiv.appendChild(makeList);
          document.body.appendChild(makeDiv);
          // Set 'items' display
-         ge("items").style.display = "block";
-         	 for(var i = 0, len=localStorage.length; i < len; i++){
+         $("items").style.display = "block";
+         	 for(var i = 0, len=localStora$.length; i < len; i++){
              var makeli = document.createElement("li");
              var linksLi = document.createElement("li");
              makeList.appendChild(makeli);
-             var key = localStorage.key(i);
-             var value = localStorage.getItem(key);
-             //Convert the string from local storage value back to an object using JSON.parse()
+             var key = localStora$.key(i);
+             var value = localStora$.$tItem(key);
+             //Convert the string from local stora$ value back to an object using JSON.parse()
              var obj = JSON.parse(value);
              var makeSubList = document.createElement("ul");
              makeli.appendChild(makeSubList);
-             //getImage(obj.friend[1], makeSubList);
+             //$tIma$(obj.friend[1], makeSubList);
              for(var n in obj){
              var makeSubli = document.createElement("li");
              makeSubList.appendChild(makeSubli);
@@ -125,20 +125,20 @@ window.addEventListener("DOMContentLoaded", function() {
              makeSubli.innerHTML = optSubText;
              makeSubList.appendChild(linksLi); 
              }
-             makeItemLinks(localStorage.key(i), linksLi); //Create edit and delete buttons/links for each item in local storage.
+             makeItemLinks(localStora$.key(i), linksLi); //Create edit and delete buttons/links for each item in local stora$.
          };
      }
-      //Get the image for the right friend that's being displayed.
-   // function getImage(imgName, makeSubList) {
-//  		var imageLi = document.createElement('li');
-//  		makeSubList.appendChild(imageLi);
-//  		var newImage = document.createElement('img');
-//  		var setSrc = newImage.setAttribute("src", "images/" + imgName + ".png");
-//  		newImage.style.paddingTop = "10px";
-//  		imageLi.appendChild(newImage);
+      //$t the ima$ for the right friend that's being displayed.
+   // function $tIma$(imgName, makeSubList) {
+//  		var ima$Li = document.createElement('li');
+//  		makeSubList.appendChild(ima$Li);
+//  		var newIma$ = document.createElement('img');
+//  		var setSrc = newIma$.setAttribute("src", "ima$s/" + imgName + ".png");
+//  		newIma$.style.paddingTop = "10px";
+//  		ima$Li.appendChild(newIma$);
 //  	}
       
-  	//Auto Populate Local Storage
+  	//Auto Populate Local Stora$
        function autoFillData() {
   		var  json = {
 	"notebook1": {
@@ -177,10 +177,10 @@ window.addEventListener("DOMContentLoaded", function() {
 		
 	}
 };
-  		// Store the JSON Object into local storage.
+  		// Store the JSON Object into local stora$.
   		for(var n in json){
   			var id   = Math.floor(Math.random()*100000001);
-  			localStorage.setItem(id, JSON.stringify(json[n]));
+  			localStora$.setItem(id, JSON.stringify(json[n]));
   		}
   	 }
       
@@ -212,18 +212,18 @@ window.addEventListener("DOMContentLoaded", function() {
     	 }
     	 
     	function editItem(){
-    			//Grab data from our item form Local Storage.
-    		 	var value = localStorage.getItem(this.key);
+    			//Grab data from our item form Local Stora$.
+    		 	var value = localStora$.$tItem(this.key);
     		 	var item = JSON.parse(value);
     		
     		//Show the form so we can edit item.
     		toggleControls("off");
     		
-    		//Populate form fields with the current localStorage values.
-    		ge("friends").value    = item.friend[1];
-    		//ge("username").value = item.userName[1];
-    		//ge("password").value = item.password[1];
-    		//ge("confirm").value  = item.confirm[1];
+    		//Populate form fields with the current localStora$ values.
+    		$("friends").value    = item.friend[1];
+    		//$("username").value = item.userName[1];
+    		//$("password").value = item.password[1];
+    		//$("confirm").value  = item.confirm[1];
     		var radios = document.forms[0].importance;
     		for(var i=0; i<radios.length; i++){
     			if(radios[i].value == "Really Important" && item.importance[1] == "Really Important"){
@@ -233,17 +233,17 @@ window.addEventListener("DOMContentLoaded", function() {
     			}	
     		}
     		if(item.favorite[1] == "Yes"){
-    			ge('fav').setAttribute("checked","checked");
+    			$('fav').setAttribute("checked","checked");
     		}
-    		ge('reminder').value = item.reminder[1];
-    		ge('date').value = item.date[1];
-    		ge('notes').value = item.notes[1];
+    		$('reminder').value = item.reminder[1];
+    		$('date').value = item.date[1];
+    		$('notes').value = item.notes[1];
     		
     		//Remove the inital listener from the input "save note" button 
     		save.removeEventListener("click", storeData);
-    		//Change submit button calue to say edit button
-    		ge("save").value = "Edit Note";
-    		var editSubmit = ge("save");
+    		//Chan$ submit button calue to say edit button
+    		$("save").value = "Edit Note";
+    		var editSubmit = $("save");
     		//Save the key value established in this function as a property of the edit submit event
     		//So we can use that value when we save the data edited
     		editSubmit.addEventListener("click",validate);
@@ -251,10 +251,10 @@ window.addEventListener("DOMContentLoaded", function() {
     	}
      	
 		function clearLocal(){
- 		if( localStorage.length === 0 ){
+ 		if( localStora$.length === 0 ){
  			alert( "There are no saved notes." );
  		}else{
- 			localStorage.clear();
+ 			localStora$.clear();
  			alert( "All notes have been deleted!" );
  			window.location.reload();
  			return false;
@@ -264,7 +264,7 @@ window.addEventListener("DOMContentLoaded", function() {
  	    	function deleteItem(){
  		var ask = confirm("Would you like to delete this note?");
  		if(ask){	
- 			localStorage.removeItem(this.key);
+ 			localStora$.removeItem(this.key);
  			alert("Note was deleted!");
  			window.location.reload();
  		}else{
@@ -275,48 +275,48 @@ window.addEventListener("DOMContentLoaded", function() {
     	
      	//Validate form fields to reuse storeData function, modify and edit not save
     	function validate(e){ // e stands for event data
-    		var getFriend   = ge("friends");
-    		//var getUsername = ge("username");
-    		//var getPassword = ge("password");
+    		var $tFriend   = $("friends");
+    		//var $tUsername = $("username");
+    		//var $tPassword = $("password");
     		
      		
-    		//Reset Error Messages 
+    		//Reset Error Messa$s 
     		errMsg.innerHTML ="";
-    		getFriend.style.border = "1px solid black";
-    		//getUsername.style.border = "1px solid black"; 
+    		$tFriend.style.border = "1px solid black";
+    		//$tUsername.style.border = "1px solid black"; 
   		
-    		//Get Error Messages; Store in an array to display them all on screen
-    		var messageAry =[];
+    		//$t Error Messa$s; Store in an array to display them all on screen
+    		var messa$Ary =[];
      		
     		//Friend Validation 
-    		if(getFriend.value==="--Choose Friend--"){
+    		if($tFriend.value==="--Choose Friend--"){
     			var friendError = "Please choose a friend";
-    			getFriend.style.border = "1px solid red";
-    			messageAry.push(friendError);
+    			$tFriend.style.border = "1px solid red";
+    			messa$Ary.push(friendError);
 			}
     		
 							//Username Validation
-						// var re = /^[A-Za-z0-9_]{6,8}ge/;
+						// var re = /^[A-Za-z0-9_]{6,8}$/;
 				//     		//User name can inlcuded Capital letter, lowercase letters, numbers and an _ . 
-				//     		 if(!re.exec(getUsername.value)){
+				//     		 if(!re.exec($tUsername.value)){
 				//     			var usernameError = "Please enter a valid username";
-				//     			getUsername.style.border = "1px solid red"; 
-				//     			messageAry.push(usernameError);
+				//     			$tUsername.style.border = "1px solid red"; 
+				//     			messa$Ary.push(usernameError);
 				//      		}
 							
 							//Password Validation
-						// if(getPassword.value=== ""){
+						// if($tPassword.value=== ""){
 				//  			var passwordError = "Please enter your Password.";
-				//  			getPassword.style.border = "1px solid red";
-				//  			messageAry.push(passwordError);
+				//  			$tPassword.style.border = "1px solid red";
+				//  			messa$Ary.push(passwordError);
 				//  		}
 				//    		
 							//If there are errors display them on the screen
 							//If there were errors, display them on the screen
- 		if(messageAry.length >= 1){
- 			for(var i=0, j=messageAry.length; i < j; i++){
+ 		if(messa$Ary.length >= 1){
+ 			for(var i=0, j=messa$Ary.length; i < j; i++){
  				var txt = document.createElement('li');
- 				txt.innerHTML = messageAry[i];
+ 				txt.innerHTML = messa$Ary[i];
  				errMsg.appendChild(txt);
  			}
     			e.preventDefault();
@@ -332,16 +332,16 @@ window.addEventListener("DOMContentLoaded", function() {
      var friendType = ["--Choose Friend--", "Girlfriend", "Boyfriend", "Fiance", "Friend", "Sibling", "Parent", "Other"],
     		 importanceValue,
     		 favoriteValue = "No",
-    	     errMsg = ge("errors");
+    	     errMsg = $("errors");
      ;
      makeField();
   
   
-	var save = ge("save");
+	var save = $("save");
     save.addEventListener("click", validate);
      
-	var displayLink = ge("displayLink");
-	displayLink.addEventListener("click", getData);
+	var displayLink = $("displayLink");
+	displayLink.addEventListener("click", $tData);
 	
-	var clearLink = ge("clearLink");
+	var clearLink = $("clearLink");
 	clearLink.addEventListener("click", clearLocal);
