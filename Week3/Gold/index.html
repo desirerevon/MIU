@@ -25,8 +25,6 @@
 
 	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
 	<script src="js/libs/modernizr.custom.min.js"></script>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
-
 </head>
 <body>
 
@@ -55,16 +53,16 @@
             <div data-role="fieldcontain">
                 <form action="" method="post" id="username">
                     <label for="username"><span class="asterisk">* </span>Username:</label>
-                    <input type="text" placeholder="Username" name="username" id="username" class="Required">
+                    <input type="text" placeholder="Username" name="username" id="username" class="required username">
                 </form>
             </div>
             
          <!-- Password Field for Login --> 
           
             <div data-role="fieldcontain">
-                <form action="" method="post" id="pword">
-                    <label for="pword"><span class="asterisk">* </span>Password:</label>
-                    <input type="text" placeholder="Password" name="pword" id="pword" class="Required ">
+                <form action="" method="post" id="password">
+                    <label for="password"><span class="asterisk">* </span>Password:</label>
+                    <input type="text" placeholder="Password" name="password" id="password" class="required ">
                 </form>
             </div>
         
@@ -75,8 +73,8 @@
         
         <div data-role="fieldcontain" data-theme="a">
             <div>
-            	<a href="#home" data-role="button" id="signin" data-theme="e" class="secondaryColor"  class="Required">Sign In</a>
-            </div>
+				<input type="submit" value="Sign In" />            
+			</div>
             
             <div>
                 <a href="#profile" data-role="button" id="signup" data-theme="e" class="secondaryColor">Sign Up</a>
@@ -91,13 +89,13 @@
      <!-- User Profile Page Header -->
      <div data-role="page" id="profile" data-add-back-btn="true">
 
-        <div data-role="header" data-postion="fixed" class="secondaryColor">
+        <div data-role="header" class="secondaryColor" data-add-back-btn="true">
             <h1>Sign Up</h1>
         </div>
 
         <!-- User Profile Page Feature -->
         <div style="text-align:center">
-             <a href="" data-ajax="false"><img src=""/></a>
+             <a href="" data-ajax="false"></a>
         </div>
 
         <!-- User Profile Information Page -->
@@ -360,9 +358,10 @@
         <div data-role="content" data-theme="a">
         
         	<form action="" method="post" id="savenoteform">
+        	<p>*Fields are Required</p>
         	
         	<div data-role="fieldcontain">
-				<label for="Choose A Friend" class="select" >Choose A Friend:</label>
+				<label for="Choose A Friend" class="select" >*Choose A Friend:</label>
 				<select name="Choose A Friend" id="select-choice-1" data-mini="true">
                 	<option value="boy">Boyfriend</option>
    					<option value="girl">Girlfriend</option>
@@ -376,20 +375,20 @@
 
 			<div data-role="fieldcontain">
     			<fieldset data-role="controlgroup">
-	   			<legend>Did you select the right friend?</legend>
+	   			<legend>*Did you select the right friend?</legend>
 	   				<input type="checkbox" name="checkbox-1" id="checkbox-1" class="custom" checked="checked"/>
 	   				<label for="checkbox-1">Yes</label>
     			</fieldset>
 			</div>
 
 			<div>
-	        		<label for="note">Note:</label>
+	        		<label for="note">*Note:</label>
 					<textarea name="friendnote" id="textarea" placeholder="Your note goes here" class="required"></textarea>
 	        </div>
 
 
 			<fieldset data-role="controlgroup">
-				<legend>How importance is this?</legend>
+				<legend>*How importance is this?</legend>
      			<input type="radio" name="radio-choice-1" id="radio-choice-1" value="choice-1" checked="checked" />
      			<label for="radio-choice-1">Really Important!</label>
 
@@ -399,7 +398,7 @@
 
 			<!--Could not get flip switch to work/still testing/On/off-->
 			<div data-role="fieldcontain">
-				<label for="flip-c">Turn Reminder:</label>
+				<label for="flip-c">*Turn Reminder:</label>
 				<select name="slider" id="flip-c" data-role="slider" data-theme="a" class="ui-slider-switch">
 				<option value="off">Off</option>
 				<option value="on">On</option>
@@ -408,12 +407,12 @@
 
 
 		 	<div data-role="fieldcontain">		
-						<label for="reminder">Number of times:</label>
+						<label for="reminder">*Number of times:</label>
 						<input type="range" name="reminder" id="reminder" value="0" min="1" max="10" />
 					</div>	
 
 				<div data-role="fieldcontain">
-					<label for="date">On This Day:</label>
+					<label for="date">*On This Day:</label>
 					<input type="text" name="remindme" id="date" placeholder="MM/DD/YY" class="required date" />
 				</div>
 
@@ -454,6 +453,11 @@
 			<img src="images/eUnder.png" class="imgSize"/>
 
 		</div>
+		
+		
+        <!-- Jquery Themes -->
+        <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+
 
 
 

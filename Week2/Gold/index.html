@@ -1,8 +1,8 @@
 <!Doctype html>
 <!--Desire Revon-->
-<!--MIU: Project 2-->
+<!--MIU: Project 3-->
 <!--Term:1206-->
-<!--I Remember Mobile Application--> 
+<!--I Remember Mobile Application-->
 <html lang="en">
 <head>
 
@@ -19,9 +19,8 @@
 	<meta http-equiv="cleartype" content="on">
 
 	<!-- StyleSheets under here -->
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
-	<link rel="stylesheet" href="css/style.css" />
-
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css"/>
+	<link rel="stylesheet" href="css/styles.css"/>
 
 	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
 	<script src="js/libs/modernizr.custom.min.js"></script>
@@ -29,153 +28,94 @@
 </head>
 <body>
 
-	
-	<!-- Start of Home Page -->
-	<div data-role="page" id="home"> <!--ID HOME-->
+<!-- Start of Home Page -->
+	<div data-role="page" id="home">
 
 		<!-- Header -->
 		<div data-role="header" data-position="fixed" class="mainColor">
 			<h1>I Remember</h1>
 		</div>
 
+		<!--Search Box-->
+		<div id="search">
+			<center>
+				<!--Links to underCon page-->
+				<form method="get" action="underCon.html"> 
+					<input type="text" name="Mynote" alt="Search" value="" maxlength="200" size="50" vspace="60px" />
+					<input type="submit" name="noteSearch" value="Find A Note" />
+				</form>
+		</div>
+
 		<!-- Home Content -->
-		<div data-role="content" >
+		<div data-role="content">
 
 			<!-- Call to Action -->
-		<div>
+			<div>
 				<a href="additem.html" rel="external">
-					<img class="imgSize" src="images/Feature.png" />
+					<img class="imgSize" src="images/Feature.png"/>
 				</a>
-		</div>
+			</div>
 
-		<!--News: html page links-->
-		<div id="news">
-			<a href="news.html" data-role="button">News - <span>Food For Thought</span></a> <!--Come Back And Fix-->
-		</div>
-    	
 			<!-- Browse -->
-			<div data-role="collapsible-set">
-			<!-- Browse By Friend Type -->
-				<div data-role="collapsible" data-collapsed="true">
-					<h3>Browse By Friend Type</h3>
-						<li>
-							<a href="underCon.html">
-								<img src="images/Friend.png"/>
-								<h4>Friend</h4>
-							</a>
-						</li>
+			<div class="ui-grid-a">
 
-						<li>
-							<a href="underCon.html">
-								 <img src="images/Girlfriend.png"/> 
-								<h4>Girlfriend</h4>
-						    </a>
-						</li>
-
-						<li>
-							<a href="underCon.html">
-								 <img src="images/Boyfriend.png"/>
-								<h4>Boyfriend</h4>
-						    </a>
-						</li>
-
-						<li>
-							<a href="underCon.html">
-							    <img src="images/Fiance.png"/> 
-								<h4>Fiance</h4>
-							</a>
-						</li>
-
-						<li>
-							<a href="underCon.html">
-							    <img src="images/Parent.png"/> 
-								<h4>Parent</h4>
-							</a>
-						</li>
-
-						<li>
-							<a href="underCon.html">
-								<img src="images/Sibling.png"/> 
-								<h4>Sibling</h4>
-							</a>
-						</li>
-
-						<li>
-							<a href="underCon.html">
-								<img src="images/Other.png"/>
-								<h4>Other</h4>
-							</a>
-						</li>
-
-					</ul>
+				<div class="ui-block-b" >
+					<a href="underCon.html">
+					<img src="/Users/desiregardner/Desktop/MIU/Week2/Bronze/images/Recent.jpg"/>
+					</a>
+					<p>Recent</p>
 				</div>
 
-				<!-- Browse by Importance-->			
-				<div data-role="collapsible" data-collapsed="true">
-					<h3>Browse by Importance</h3>
-					<ul data-role="listview">
-
-						<li>
-							<a href="underCon.html">
-								<!-- <img src="images/.png"/> -->
-								<h4>Really Important</h4>
-							</a>
-						</li>
-
-						<li>
-							<a href="underCon.html">
-								<!-- <img src="images/.png"/> -->
-								<h4>I can't remember everything</h4>
-							</a>
-						</li>
-					</ul>
+				<div class="ui-block-b" >
+					<a href="underCon.html">
+					<img src="/Users/desiregardner/Desktop/MIU/Week2/Bronze/images/Shared.jpg"/>
+					</a>
+					<p>Shared</p>
 				</div>
 
-				<!-- Browse by Note Type-->			
-				<div data-role="collapsible" data-collapsed="true">
-					<h3>Browse by Notes Type</h3>
-					<ul data-role="listview">
-
-						<li>
-							<a href="underCon.html">
-								<img src="/Users/desiregardner/Desktop/MIU/Week2/Gold/images/Recent.png"/> 
-								<h4>Recent</h4>
-							</a>
-						</li>
-
-						<li>
-							<a href="underCon.html">
-								<img src="/Users/desiregardner/Desktop/MIU/Week2/Gold/images/Shared.png"/> 
-								<h4>Shared</h4>
-							</a>
-						</li>
-
-						<li>
-							<a href="underCon.html">
-								<img src="/Users/desiregardner/Desktop/MIU/Week2/Gold/images/Favorites.png"/> 
-								<h4>Favorites</h4>
-							</a>
-						</li>
-
-						<li>
-							<a href="underCon.html">
-							    <img src="/Users/desiregardner/Desktop/MIU/Week2/Gold/images/Trash.png"/> 
-								<h4>Trash</h4>
-							</a>
-						</li>
-					</ul>
+				<div class="ui-block-b" >
+					<a href="underCon.html">
+					<img src="/Users/desiregardner/Desktop/MIU/Week2/Bronze/images/Favorites.jpg"/>
+					</a>
+					<p>Favorites</p>
 				</div>
+
+				<div class="ui-block-b">
+					<a href="underCon.html">
+					<img src="/Users/desiregardner/Desktop/MIU/Week2/Bronze/images/Trash.jpg"/>
+					</a>
+					<p>Trash</p>
+				</div>
+			</div>
+
+		</div>
+
 		<!-- Footer -->
 		<div data-role="footer" data-position="fixed">
-			<!-- Nav bar -->
+			<!-- Navigation bar -->
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#home" data-icon="home">Home</a></li>
 					<li><a href="#about" data-icon="info" data-iconpos="left">About</a></li>
-					<li><a href="/Users/desiregardner/Desktop/MIU/Week2/Bronze/index.html" data-icon="plus">Bronze</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week2/Gold/index.html" data-icon="plus">Gold</a></li>
 				</ul>
 			</div>
 		</div>
+
+	</div>
+
+		<!-- Footer -->
+		<div data-role="footer" data-position="fixed">
+			<!-- Navigation bar -->
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+					<li><a href="#about" data-icon="info" data-iconpos="left">About</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week2/Gold/index.html" data-icon="plus">Gold</a></li>
+				</ul>
+			</div>
+		</div>
+
 	</div>
 
 	<!-- Start of About App Page -->
@@ -190,6 +130,10 @@
 		<div data-role="content">
 
 			<div>
+				<img src="" class="imgSize" />
+			</div>
+
+			<div>
 				<h4>I Remember</h4>
 				<p class="indent">More info here...</p><!--Add info about app-->
 			</div>
@@ -199,63 +143,27 @@
 					<ul data-role="listview" data-inset="true">
 						<li data-role="list-divider">Why you will love it!</li>
 						<li>Easy Access</li>
-						<li>Does not require you to be connected to the internet</li>
 						<li>Connect with Facebook</li>
 					</ul>
 				</div>
-		</div>
-	</div>
-
-		<!-- Footer -->
-		<div data-role="footer" data-position="fixed">
-			<!-- Nav bar -->
-			<div data-role="navbar">
-				<ul>
-					<li><a href="#home" data-icon="home">Home</a></li>
-					<li><a href="#about" data-icon="info" data-iconpos="left">About</a></li>
-					<li><a href="/Users/desiregardner/Desktop/MIU/Week2/Bronze/index.html" data-icon="plus">Bronze</a></li>
-				</ul>
 			</div>
-		</div>
-	</div>
-
-	<!-- Start of otherApp Page -->
-	<div data-role="page" id="otherApp" data-add-back-btn="true">
-
-		<!-- Header -->
-		<div data-role="header" data-position="fixed" class="mainColor">
-			<h1>Bronze App</h1>
-		</div>
-
-		<!--  Other App Content -->
-		<div data-role="content">
-
-			<ul data-role="listview">
-				<li>
-					<img src=""/>
-					<h4>Bronze Application</h4>
-					<p>To View the Bronze Application click the button below</p>
-				</li>
-			</ul>
-
-			<a href="/Desktop/MIU/Week2/Bronze/index.html" data-role="button">Bronze App</a> <!--link to bronze app with github index.html page-->
 
 		</div>
 
 		<!-- Footer -->
 		<div data-role="footer" data-position="fixed">
-			<!-- Navbar -->
+			<!-- Navigation bar -->
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#home" data-icon="home">Home</a></li>
 					<li><a href="#about" data-icon="info" data-iconpos="left">About</a></li>
-					<li><a href="/Users/desiregardner/Desktop/MIU/Week2/Bronze/index.html" data-icon="plus">Bronze</a></li>
+					<li><a href="/Users/desiregardner/Desktop/MIU/Week2/Gold/index.html" data-icon="plus">Gold</a></li>
 				</ul>
 			</div>
 		</div>
 
 	</div>
-	
+
 	<!-- Start of Construction Page -->
 	<div data-role="page" id="underCon.html" data-add-back-btn="true"><!--ID UNDER CON-->
 
@@ -271,24 +179,11 @@
 
 		</div>
 
-		<!-- Footer -->
-		<div data-role="footer" data-position="fixed">
-			<!-- Navigation bar -->
-			<div data-role="navbar">
-				<ul>
-					<li><a href="#home" data-icon="home">Home</a></li>
-					<li><a href="#about" data-icon="info" data-iconpos="left">About</a></li>
-					<li><a href="/Users/desiregardner/Desktop/MIU/Week2/Bronze/index.html" data-icon="plus">Bronze</a></li>
-				</ul>
-			</div>
-		</div>
 
-	</div>
-
-		<!-- JavaScript under here -->
-		<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
-		<script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
-		<script type="text/javascript" src="js/json.js"></script>
-		<script type="text/javascript" src="js/main.js"></script>
-	</body>
+	<!-- JavaScript under here -->
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
+	<script type="text/javascript" src="js/json.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
 </html>
